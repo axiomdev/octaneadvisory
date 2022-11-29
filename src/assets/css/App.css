@@ -30,6 +30,24 @@
   src: url("../fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
+.block {
+  display: block;
+}
+
+.none {
+  display: none !important;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+}
+
 body {
   --primary-color: #c1ad89;
 }
@@ -87,6 +105,8 @@ header {
   align-items: center;
 }
 
+
+
 footer {
   font-family: "Roboto Regular";
   text-align: center;
@@ -95,6 +115,7 @@ footer {
   background: #232323;
   color: #F3F3F3;
   line-height: 29px;
+  
 }
 
 .header-logo {
@@ -207,4 +228,36 @@ footer {
 .card-step div p{
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+
+.step-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.step-question label {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Poppins Semi Bold";
+  font-size: 25px;
+  text-align: center;
+}
+
+.step-question select {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Poppins Semi Bold";
+  font-size: 25px;
+  width: 40%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.step-overflow {
+  height: 600px;
+    overflow: auto;
 }

@@ -228,11 +228,7 @@ function Home() {
 					</p>
 				</section>
 
-				
-
-				<footer>
-					<p>2023 © Tous droit reservés. Octane Advisory</p>
-				</footer>
+			
 			</main>
 		</div>
 	);

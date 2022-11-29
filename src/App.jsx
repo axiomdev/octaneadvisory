@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import NoMatching from "./pages/NoMatching";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 				<Route path="contact" element={<Contact />} />
 				<Route path="*" element={<NoMatching />} />
 			</Routes>
+			<Footer></Footer>
 		</div>
 	);
 }
