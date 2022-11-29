@@ -6,7 +6,6 @@ import "../assets/css/App.css";
 import Typed from "react-typed";
 import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
-import { Stepper } from "awesome-react-stepper";
 import { Line, Circle } from "rc-progress";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 

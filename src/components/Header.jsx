@@ -3,7 +3,6 @@ import background from "../assets/images/home-background.jpeg";
 import Typed from "react-typed";
 import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
-import { Stepper } from "awesome-react-stepper";
 import { Line, Circle } from "rc-progress";
 import { Routes, Route, Outlet, Link, Router } from "react-router-dom";
 import Contact from "../pages/Contact";
