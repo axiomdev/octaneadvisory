@@ -10,24 +10,26 @@ import NoMatching from "../pages/NoMatching";
 import Home from "../pages/Home";
 
 function Header() {
-    const [isOpen, setOpen] = useState(false);
+	const [isOpen, setOpen] = useState(false);
 
 	return (
 		<>
 			<header>
-				<img src={logo} className="header-logo" alt="logo" />
-
+				<Link to="/" onClick={() => setOpen(false)}>
+					<img src={logo} className="header-logo" alt="logo" />
+				</Link>
 				<Hamburger toggled={isOpen} toggle={setOpen} />
 
 				{isOpen ? (
-					<div class="menu">
-						<p>Accueil</p>
+					<div class="menu" onClick={() => setOpen(false)}>
+						<Link class="link-nav" to="/contact" onClick={() => setOpen(false)}>
+							Contactez-moi
+						</Link>
 					</div>
 				) : (
 					""
 				)}
 			</header>
-			
 		</>
 	);
 }

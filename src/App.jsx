@@ -8,13 +8,25 @@ import NoMatching from "./pages/NoMatching";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./assets/css/App.css";
 
 function App() {
+	const [contact, setContact] = useState(false);
 
-
+	useEffect(() => {
+		setTimeout(() => {
+			setContact(true);
+		}, 5000);
+	});
 	return (
 		<div>
 			<Header></Header>
+			{contact ? (
+				<div className="rounded-right">
+					<Link to="/contact">Contactez-moi</Link>
+				</div>
+			) : ""}
+
 			<Routes>
 				<Route index path="/" element={<Home />} />
 				<Route path="contact" element={<Contact />} />

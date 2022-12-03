@@ -30,6 +30,14 @@
   src: url("../fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
+.link-nav {
+  font-family: 'Roboto Bold';
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: #232323;
+} 
+
 .block {
   display: block;
 }
@@ -66,13 +74,30 @@ h3 {
     top: -25px;
 }
 
+h4 {
+  font-family: "Poppins Semi Bold";
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.card-step-items h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 10px;
+}
+
+.card-step-items img {
+  margin-top: 10px;
+}
+
 .margin-left-right {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .double-titles {
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 
@@ -89,6 +114,19 @@ h3 {
 
 .double-titles h2 span {
   font-family: "Poppins Regular"
+}
+
+.one-line {
+  margin-bottom: 0px;
+  margin-top: 100px;
+}
+
+.methodology h3 {
+  left: 7%;
+}
+
+.methodology {
+  margin-bottom: 0px;
 }
 
 p {
@@ -124,7 +162,7 @@ footer {
 
 .hero-background {
   background: url('../images/home-background.jpeg');
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -133,8 +171,7 @@ footer {
 
 .hero-block-texts {
   background: rgba(255, 255, 255, 0.30);
-  opacity: 0.8;
-  padding: 10px;
+  padding: 30px;
   width: 80%;
 }
 
@@ -145,7 +182,7 @@ footer {
 
 .hero-block-texts p {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .hero-block-texts button {
@@ -155,25 +192,30 @@ footer {
 .button {
   border: none;
   height: 30px;
-  width: 180px;
+  width: 2250px;
   color: #F3F3F3;
   background: var(--primary-color);
   border-radius: 30px;
   font-family: "Poppins Semi Bold";
   height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .menu {
   position: absolute;
     width: 100%;
-    background: rgba(255, 255, 255, 0.401);
+    background: rgba(255, 255, 255, 0.801);
     top: 100px;
     height: 88vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 100px;
     z-index: 10;
 }
 
@@ -203,14 +245,16 @@ footer {
   position: relative;
   border-radius: 15px;
   background: #FFFCFC;
-  width: 200px;
+  width: 85%;
   line-height: 15px;
+  margin: auto;
+  margin-top: 70px;
 }
 
 .card-step span {
   position: absolute;
-  top: -25px;
-  left: 50%;
+  top: -8px;
+  left: 44%;
   font-size: 60px;
 }
 
@@ -223,13 +267,13 @@ footer {
 .card-step div img{
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 30% !important;
 }
 
 .card-step div p{
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
 
 .step-question {
   display: flex;
@@ -248,16 +292,32 @@ footer {
 }
 
 .step-question select {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: "Poppins Semi Bold";
   font-size: 25px;
-  width: 40%;
+  width: 100%;
   border-radius: 20px;
   padding: 10px;
 }
 
 .step-overflow {
-  height: 600px;
-    overflow: auto;
+  margin-bottom:200px
+}
+
+.rounded-right {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background:rgb(51, 51, 51);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.rounded-right a {
+  text-decoration: none;
+  font-family: "Poppins Semi Bold";
+  text-transform: uppercase;
+  color:white !important;
 }

@@ -2,11 +2,18 @@ import logo from "../assets/images/octane-logo.png";
 import background from "../assets/images/home-background.jpeg";
 import schema1 from "../assets/images/schema-1.png";
 import firstStep from "../assets/images/first-step-1.png";
+import secondStep from "../assets/images/second-step.png";
+import thirdStep from "../assets/images/third-step.png";
+import fourthStep from "../assets/images/fourth-step.png";
+import fifthStep from "../assets/images/fifth-step.png";
 import "../assets/css/App.css";
 import Typed from "react-typed";
 import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
 import { Line } from "rc-progress";
+import { Link } from "react-router-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 function Home() {
 	const [isOpen, setOpen] = useState(false);
@@ -31,11 +38,46 @@ function Home() {
 		},
 	];
 
+	const steps_methodology = [
+		{
+			id: 1,
+			step_number: "I",
+			title: "Diagnostiquer (Où en est-on ?)",
+			icon_path: firstStep,
+			text: "Un état des lieux s’articule autour d’un diagnostic stratégique et financier. Cette analyse doit permettre d’identifier les facteurs clés de succès et de risques de l’entreprise.",
+		},
+		{
+			id: 2,
+			step_number: "II",
+			title: "Définir (Où va-t-on ?)",
+			icon_path: secondStep,
+			text: "Il est question de définir les objectifs de l’entreprise dans un plan d’action. Un horizon temporel cadre les actions stratégiques (long terme) et opérationnelles (moyen terme et court terme).",
+		},
+		{
+			id: 3,
+			step_number: "III",
+			title: "Piloter (Comment on y va ?)",
+			icon_path: thirdStep,
+			text: "Une fois le cap défini, un tableau de bord stratégique et opérationnel permettent de piloter les actions à entreprendre. Des indicateurs clés de performance sont choisis et conçus pour déployer la stratégie de l’entreprise.",
+		},
+		{
+			id: 4,
+			step_number: "IV",
+			title: "Evaluer (Est-ce qu’on y est arrivé ?)",
+			icon_path: fourthStep,
+			text: "Il convient d’identifier et d’analyser les écarts entre les prévisions et les réalisations. Ces signaux doivent susciter la réflexion des équipes concernées pour mieux comprendre les causes et ses effets sur l’entreprise.",
+		},
+		{
+			id: 5,
+			step_number: "V",
+			title: "Corriger (Qu’est-ce qui ne va pas ?)",
+			icon_path: fifthStep,
+			text: "Pour affiner la stratégie, l’équipe dirigeante doit mener des actions correctives. Elles doivent permettre d’aligner les prévisions sur les réalités stratégiques et opérationnelles. À terme et, par ce processus de gestion de la performance, l’entreprise devient plus réactive face à son environnement.",
+		},
+	];
+
 	return (
 		<div>
-			
-			
-
 			<main>
 				<div class="hero-background">
 					<div class="hero-block-texts">
@@ -63,7 +105,7 @@ function Home() {
 							en alignant « finance et stratégie ».
 						</p>
 
-						<button className="button">Contactez-nous</button>
+						<Link className="button">Contactez-nous</Link>
 					</div>
 				</div>
 
@@ -93,7 +135,7 @@ function Home() {
 						/>
 					</div>
 
-					<div class="double-titles">
+					<div class="double-titles one-line">
 						<h2>
 							<span>C’est </span> anticiper :
 						</h2>
@@ -110,7 +152,7 @@ function Home() {
 						conséquence » plutôt qu’en connaissance de cause.
 					</p>
 
-					<div class="double-titles">
+					<div class="double-titles one-line">
 						<h2>
 							<span>C’est </span> perfectionner :
 						</h2>
@@ -125,7 +167,7 @@ function Home() {
 						de la chaine de valeur.
 					</p>
 
-					<div class="double-titles">
+					<div class="double-titles one-line">
 						<h2>
 							<span>C’est </span> contrôler :
 						</h2>
@@ -139,7 +181,7 @@ function Home() {
 						gagne de nouvelle part de marché.
 					</p>
 
-					<div class="double-titles">
+					<div class="double-titles one-line">
 						<h2>
 							<span>C’est </span> impliquer :
 						</h2>
@@ -157,7 +199,7 @@ function Home() {
 				</section>
 
 				<section className="margin-left-right">
-					<div class="double-titles text-center">
+					<div class="double-titles text-center methodology">
 						<h2 className="title-methodology">
 							<span>Notre </span> méthodologie
 						</h2>
@@ -175,26 +217,29 @@ function Home() {
 					</p>
 
 					<div class="wrapper">
-						<div class="item">
-							<img src="https://octaneadvisory.fr/wp-content/uploads/2022/04/etape-1.png" />
-						</div>
-						<div className="card-step">
-							<span>I</span>
-							<div>
-								<h4>Diagnostiquer</h4>
-								<img
-									className="logo-step"
-									src={firstStep}
-									alt="first-step-logo"
-								/>
-								<p>
-									Un état des lieux s’articule autour d’un diagnostic
-									stratégique et financier. Cette analyse doit permettre
-									d’identifier les facteurs clés de succès et de risques de
-									l’entreprise.
-								</p>
-							</div>
-						</div>
+						<Carousel
+							showArrows={true}
+							showIndicators={false}
+							showStatus={false}
+							centerMode={true}
+						>
+							{steps_methodology.map((step, index) => {
+								return (
+									<div className="card-step">
+										<span>{step.step_number}</span>
+										<div class="card-step-items">
+											<h4>{step.title}</h4>
+											<img
+												className="logo-step"
+												src={step.icon_path}
+												alt="first-step-logo"
+											/>
+											<p>{step.text}</p>
+										</div>
+									</div>
+								);
+							})}
+						</Carousel>
 					</div>
 				</section>
 
@@ -227,8 +272,6 @@ function Home() {
 						constituent le socle sur lequel repose ma philosophie managériale.
 					</p>
 				</section>
-
-			
 			</main>
 		</div>
 	);
