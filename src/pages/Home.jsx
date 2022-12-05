@@ -16,28 +16,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 function Home() {
-	const [isOpen, setOpen] = useState(false);
-
-	const [percent, setPercent] = useState(0);
-	const [step, setStep] = useState(1);
-
-	useEffect(() => {
-		// Update the document title using the browser API
-	});
-
-	const steps = [
-		{
-			id: 1,
-			question: "Quel est votre secteur dactivité?",
-			values: ["a", "b"],
-		},
-		{
-			id: 2,
-			question: "Mon entreprise existe depuis",
-			values: ["1an", "2ans"],
-		},
-	];
-
 	const steps_methodology = [
 		{
 			id: 1,
@@ -105,7 +83,9 @@ function Home() {
 							en alignant « finance et stratégie ».
 						</p>
 
-						<Link className="button">Contactez-nous</Link>
+						<Link to="/contact" className="button">
+							Contactez-nous
+						</Link>
 					</div>
 				</div>
 
@@ -217,12 +197,32 @@ function Home() {
 					</p>
 
 					<div class="wrapper">
-						<Carousel
-							showArrows={true}
-							showIndicators={false}
-							showStatus={false}
-							centerMode={true}
-						>
+						<div className="card-step-mobile">
+							<Carousel
+								showArrows={false}
+								showIndicators={false}
+								showStatus={false}
+								centerMode={false}
+							>
+								{steps_methodology.map((step, index) => {
+									return (
+										<div className="card-step">
+											<span>{step.step_number}</span>
+											<div class="card-step-items">
+												<h4>{step.title}</h4>
+												<img
+													className="logo-step"
+													src={step.icon_path}
+													alt="first-step-logo"
+												/>
+												<p>{step.text}</p>
+											</div>
+										</div>
+									);
+								})}
+							</Carousel>
+						</div>
+						<div className="card-step-desktop">
 							{steps_methodology.map((step, index) => {
 								return (
 									<div className="card-step">
@@ -239,11 +239,11 @@ function Home() {
 									</div>
 								);
 							})}
-						</Carousel>
+						</div>
 					</div>
 				</section>
 
-				<section className="margin-left-right">
+				<section className="margin-left-right" id="about-me">
 					<div class="double-titles text-center">
 						<h2>
 							<span>A</span> propos de moi

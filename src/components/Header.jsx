@@ -18,7 +18,7 @@ function Header() {
 				<Link to="/" onClick={() => setOpen(false)}>
 					<img src={logo} className="header-logo" alt="logo" />
 				</Link>
-				<Hamburger toggled={isOpen} toggle={setOpen} />
+				<Hamburger toggled={isOpen} toggle={setOpen} className="burger" />
 
 				{isOpen ? (
 					<div class="menu" onClick={() => setOpen(false)}>
@@ -29,6 +29,14 @@ function Header() {
 				) : (
 					""
 				)}
+				<div class="menu-desktop">
+				<a class="link-nav" href="/#about-me">
+							Qui suis-je ?
+						</a>
+						<Link class="link-nav" to="/contact">
+							Contactez-moi
+						</Link>
+					</div>
 			</header>
 		</>
 	);

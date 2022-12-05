@@ -32,7 +32,7 @@ function App() {
 				<Route path="contact" element={<Contact />} />
 				<Route path="*" element={<NoMatching />} />
 			</Routes>
-			<Footer></Footer>
+			<Footer></Footer>	
 		</div>
 	);
 }

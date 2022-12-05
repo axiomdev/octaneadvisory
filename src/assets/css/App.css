@@ -154,6 +154,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 100;
+  background: #F3F3F3;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
@@ -186,6 +193,7 @@ footer {
   background: rgba(255, 255, 255, 0.30);
   padding: 30px;
   width: 80%;
+  margin-top: 80px;
 }
 
 .hero-block-texts h1 {
@@ -219,7 +227,7 @@ footer {
 }
 
 .menu {
-  position: absolute;
+    position: absolute;
     width: 100%;
     background: rgba(255, 255, 255, 0.801);
     top: 100px;
@@ -230,6 +238,7 @@ footer {
     justify-content: space-between;
     padding-top: 100px;
     z-index: 10;
+    left: 0;
 }
 
 .schema1 {
@@ -337,4 +346,85 @@ footer {
   font-family: "Poppins Semi Bold";
   text-transform: uppercase;
   color:white !important;
+}
+
+.contact-top {
+  margin-top: 97px;
+  position: fixed;
+  background: #F3F3F3;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.step-block {
+  margin-top: 180px
+}
+
+.steps {
+  height: 600px;
+  position: relative;
+  top: 173px;
+  overflow: hidden;
+
+}
+
+.card-step-desktop {
+  display: none;
+}
+
+.card-step-mobile {
+  display: block;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+#about-me p {
+  margin-bottom: 60px;
+}
+
+
+
+@media (min-width: 1000px) {
+  header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .margin-left-right{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .hamburger-react {
+    display: none;
+  }
+
+  .menu-desktop {
+    display: block;
+  }
+
+  .schema1 {
+    width: 400px;
+  }
+
+  .card-step-desktop {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .card-step {
+    width: 18%;
+    margin: 9px
+  }
+
+  .card-step-mobile {
+    display: none;
+  }
+
+  .hero-block-texts {
+    padding: 40px;
+  }
 }

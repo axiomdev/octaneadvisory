@@ -8,14 +8,18 @@ import Hamburger from "hamburger-react";
 import { useEffect, useRef, useState } from "react";
 import { Line, Circle } from "rc-progress";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { useCallback } from "react";
 
 function Contact() {
 	const [isOpen, setOpen] = useState(false);
 
 	const [percent, setPercent] = useState(0);
 	const [stepLevel, setStepLevel] = useState(1);
-	const bottomRef = useRef(null);
+	const bottomRef = useRef();
 	const [steps, setSteps] = useState([]);
+	const handleScroll = useCallback(() => {
+		console.log("scrolling")
+	  }, [])
 
 	useEffect(() => {
 		setSteps((current) => [
@@ -106,13 +110,12 @@ function Contact() {
 
 	bottomRef.current?.scrollIntoView({
 		behavior: "smooth",
-		block: "start",
-		inline: "center",
+	
 	});
 
 	return (
 		<div className="p-relative margin-left-right">
-			<div>
+			<div className="contact-top">
 				<h1>Formulaire de contact</h1>
 
 				<div>
@@ -126,45 +129,46 @@ function Contact() {
 					<p className="p-absolute">{Math.round(percent)}</p>
 				</div>
 			</div>
-			{steps.map((step, index) => {
-				if (step.type == "select") {
-					return (
-						<div key={step.id} className={"step " + step.class}>
-							<div className="step-question">
-								<label>{step.question}</label>
-								<select
-									onChange={() => {
-										setPercent(((index + 1) / steps.length) * 100);
-										setStepLevel(step.id);
-										steps[index + 1].class = "block";
-									}}
-								>
-									{step.values.map((quest) => (
-										<option key={quest}>{quest}</option>
-									))}
-								</select>
+			<div className="steps">
+				{steps.map((step, index) => {
+					if (step.type == "select" ) {
+						return (
+							<div key={step.id} className={"step " + step.class}>
+								<div className="step-question">
+									<label>{step.question}</label>
+									<select
+										onChange={() => {
+											setPercent(((index + 1) / steps.length) * 100);
+											setStepLevel(step.id);
+											steps[index + 1].class = "block";
+										}}
+									>
+										{step.values.map((quest) => (
+											<option key={quest}>{quest}</option>
+										))}
+									</select>
+								</div>
 							</div>
-						</div>
-					);
-				} else if (step.type == "input") {
-					return (
-						<div key={step.id} className={"step " + step.class}>
-							<div className="step-question">
-								<label>{step.question}</label>
-								<input
-									onChange={() => {
-										setPercent(((index + 1) / steps.length) * 100);
-										setStepLevel(step.id);
-										steps[index + 1].class = "block";
-									}}
-								/>
+						);
+					} else if (step.type == "input" ) {
+						return (
+							<div key={step.id} className={"step " + step.class}>
+								<div className="step-question">
+									<label>{step.question}</label>
+									<input
+										onChange={() => {
+											setPercent(((index + 1) / steps.length) * 100);
+											setStepLevel(step.id);
+											steps[index + 1].class = "block";
+										}}
+									/>
+								</div>
 							</div>
-						</div>
-					);
-				}
-			})}
-
-			<div ref={bottomRef} />
+						);
+					}
+				})}
+				<div ref={bottomRef} />
+			</div>
 		</div>
 	);
 }
