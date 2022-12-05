@@ -21,11 +21,11 @@ function App() {
 	return (
 		<div>
 			<Header></Header>
-			{contact ? (
+			{/* {contact ? (
 				<div className="rounded-right">
 					<Link to="/contact">Contactez-moi</Link>
 				</div>
-			) : ""}
+			) : ""} */}
 
 			<Routes>
 				<Route index path="/" element={<Home />} />
