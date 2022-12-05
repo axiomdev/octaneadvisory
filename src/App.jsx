@@ -19,13 +19,13 @@ function App() {
 		}, 5000);
 	});
 	return (
-		<div>
+		<>
 			<Header></Header>
-			{/* {contact ? (
+			{contact ? (
 				<div className="rounded-right">
 					<Link to="/contact">Contactez-moi</Link>
 				</div>
-			) : ""} */}
+			) : ""}
 
 			<Routes>
 				<Route index path="/" element={<Home />} />
@@ -33,7 +33,7 @@ function App() {
 				<Route path="*" element={<NoMatching />} />
 			</Routes>
 			<Footer></Footer>	
-		</div>
+		</>
 	);
 }
 

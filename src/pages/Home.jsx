@@ -57,7 +57,7 @@ function Home() {
 	];
 
 	return (
-		<div>
+		<>
 			<main>
 				<div class="hero-background">
 					<div class="hero-block-texts">
@@ -184,12 +184,7 @@ function Home() {
 				</section>
 
 				<section className="margin-left-right">
-					<div class="double-titles text-center methodology">
-						<h2 className="title-methodology">
-							<span>Notre </span> méthodologie
-						</h2>
-						<h3>Methodologie</h3>
-					</div>
+					@
 					<p>
 						J’adopte une méthodologie rigoureuse qui consiste à passer 95% de
 						mon temps à définir correctement votre problème et les 5% restants,
@@ -284,7 +279,7 @@ function Home() {
 					</div>
 				</section>
 			</main>
-		</div>
+		</>
 	);
 }
 
