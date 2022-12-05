@@ -6,6 +6,8 @@ import secondStep from "../assets/images/second-step.png";
 import thirdStep from "../assets/images/third-step.png";
 import fourthStep from "../assets/images/fourth-step.png";
 import fifthStep from "../assets/images/fifth-step.png";
+import gif from "../assets/images/video-tableau-de-bord.gif";
+import photoMe from "../assets/images/mendel-drai.jpg";
 import "../assets/css/App.css";
 import Typed from "react-typed";
 import Hamburger from "hamburger-react";
@@ -176,6 +178,9 @@ function Home() {
 						progrès, dans les processus et routines de l’entreprise.
 						L’intelligence collective stimule ainsi la performance.
 					</p>
+					<div className="video">
+						<img src={gif} />
+					</div>
 				</section>
 
 				<section className="margin-left-right">
@@ -250,27 +255,33 @@ function Home() {
 						</h2>
 						<h3>Qui suis-je ?</h3>
 					</div>
-					<p>
-						Je m’appelle{" "}
-						<a
-							href="https://www.linkedin.com/in/mendel-drai-aa8761171/"
-							target="_blank"
-						>
-							Mendel Drai
-						</a>
-						. Titulaire du diplôme supérieure de comptabilité et de gestion
-						(DSCG), certifié en stratégie et corporate finance de la
-						prestigieuse école HEC, mon savoir-faire s’articule autour d’une
-						double ambition : capter et délivrer la valeur de votre entreprise.
-						Après 8 ans d’évolution dans les domaines de la comptabilité, la
-						finance et la stratégie d’entreprise, je partage mes connaissances
-						aux entrepreneurs pour formuler des analyses pertinentes en amont de
-						toutes prises de décisions. Expert en pilotage de la performance, je
-						conçois des outils automatisés et personnalisés tel que des tableaux
-						de bord et des systèmes de reporting. Je développe une approche
-						taillée à la mesure de vos exigences. L’écoute et la sagesse
-						constituent le socle sur lequel repose ma philosophie managériale.
-					</p>
+					<div className="about-me-blocks">
+						<div className="block-photo">
+							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
+						</div>
+						<p>
+							Je m’appelle{" "}
+							<a
+								href="https://www.linkedin.com/in/mendel-drai-aa8761171/"
+								target="_blank"
+							>
+								Mendel Drai
+							</a>
+							. Titulaire du diplôme supérieure de comptabilité et de gestion
+							(DSCG), certifié en stratégie et corporate finance de la
+							prestigieuse école HEC, mon savoir-faire s’articule autour d’une
+							double ambition : capter et délivrer la valeur de votre
+							entreprise. Après 8 ans d’évolution dans les domaines de la
+							comptabilité, la finance et la stratégie d’entreprise, je partage
+							mes connaissances aux entrepreneurs pour formuler des analyses
+							pertinentes en amont de toutes prises de décisions. Expert en
+							pilotage de la performance, je conçois des outils automatisés et
+							personnalisés tel que des tableaux de bord et des systèmes de
+							reporting. Je développe une approche taillée à la mesure de vos
+							exigences. L’écoute et la sagesse constituent le socle sur lequel
+							repose ma philosophie managériale.
+						</p>
+					</div>
 				</section>
 			</main>
 		</div>
