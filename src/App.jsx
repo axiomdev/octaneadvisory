@@ -22,7 +22,7 @@ function App() {
 		<>
 			<Header></Header>
 			{contact ? (
-				<div className="rounded-right">
+				<div className="rounded-right animate__animated animate__fadeInRight">
 					<Link to="/contact">Contactez-moi</Link>
 				</div>
 			) : ""}
@@ -32,7 +32,7 @@ function App() {
 				<Route path="contact" element={<Contact />} />
 				<Route path="*" element={<NoMatching />} />
 			</Routes>
-			<Footer></Footer>	
+			{/* <Footer></Footer>	 */}
 		</>
 	);
 }

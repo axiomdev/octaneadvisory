@@ -30,13 +30,20 @@ function Header() {
 					""
 				)}
 				<div class="menu-desktop">
-				<a class="link-nav" href="/#about-me">
-							Qui suis-je ?
-						</a>
-						<Link class="link-nav" to="/contact">
-							Contactez-moi
-						</Link>
-					</div>
+				<a class="link-nav" href="/#">
+						Pourquoi ? 
+					</a>
+					<a class="link-nav" href="/#">
+						Méthodologie 
+					</a>
+					<a class="link-nav" href="/#about-me">
+						Qui suis-je ?
+					</a>
+					
+				</div>
+				<Link class="link-nav" to="/contact">
+						Contactez-moi
+					</Link>
 			</header>
 		</>
 	);

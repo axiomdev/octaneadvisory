@@ -131,7 +131,7 @@ function Contact() {
 			</div>
 			<div className="steps">
 				{steps.map((step, index) => {
-					if (step.type == "select" ) {
+					if (step.type == "select" && step.class == "block") {
 						return (
 							<div key={step.id} className={"step " + step.class}>
 								<div className="step-question">
@@ -150,7 +150,7 @@ function Contact() {
 								</div>
 							</div>
 						);
-					} else if (step.type == "input" ) {
+					} else if (step.type == "input" && step.class == "block") {
 						return (
 							<div key={step.id} className={"step " + step.class}>
 								<div className="step-question">
@@ -167,8 +167,9 @@ function Contact() {
 						);
 					}
 				})}
-				<div ref={bottomRef} />
+<div ref={bottomRef} />
 			</div>
+
 		</div>
 	);
 }

@@ -1,4 +1,6 @@
 @import './reset.css';
+@import 'animate.css';
+
 
 @font-face {
   font-family: "Roboto Regular";
@@ -58,6 +60,7 @@
 
 body {
   --primary-color: #c1ad89;
+  background:#222222 ;
 }
 
 h1 {
@@ -93,6 +96,10 @@ h4 {
   font-size: 17px;
   line-height: 20px;
   height: 65px;
+}
+
+.card-step-items p {
+  color: #232323;
 }
 
 .card-step-items img {
@@ -134,10 +141,6 @@ h4 {
   margin-top: 100px;
 }
 
-.methodology h3 {
-  left: 7%;
-}
-
 .methodology {
   margin-bottom: 0px;
 }
@@ -147,6 +150,7 @@ p {
   font-size: 15px;
   line-height: 1.4;
   text-align: justify;
+  color: rgba(255,255,255,0.85);
 }
 
 header {
@@ -194,10 +198,14 @@ footer {
 }
 
 .hero-block-texts {
-  background: rgba(255, 255, 255, 0.30);
+  background: rgba(255, 255, 255, 0.40);
   padding: 30px;
   width: 80%;
   margin-top: 80px;
+}
+
+.perf {
+  color: var(--primary-color);;
 }
 
 .hero-block-texts h1 {
@@ -208,6 +216,7 @@ footer {
 .hero-block-texts p {
   margin-top: 20px;
   margin-bottom: 40px;
+  color: #000;
 }
 
 .hero-block-texts button {
@@ -243,6 +252,7 @@ footer {
     padding-top: 100px;
     z-index: 10;
     left: 0;
+    transition: height 300ms linear;
 }
 
 .schema1 {
@@ -410,11 +420,37 @@ footer {
   height: 40%;
 }
 
+.button-hero {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.button-hero a {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.video img {
+  width: 40%;
+  border-radius: 55px;
+  border: 1px solid #C1AD89;
+}
 
 @media (min-width: 1000px) {
   header {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  h1 {
+    font-size: 50px
+  }
+
+  .hero-block-texts p {
+    font-size: 20px
   }
 
   .margin-left-right{
@@ -428,6 +464,12 @@ footer {
 
   .menu-desktop {
     display: block;
+    width: 63%;
+    padding-left: 10%;
+  }
+
+  .menu-desktop a {
+    margin-right: 80px;
   }
 
   .schema1 {
@@ -450,9 +492,15 @@ footer {
 
   .hero-block-texts {
     padding: 40px;
+    width: 40%;
+    margin-top: 200px;
   }
 
-  .video img {
-    width: 40%;
+
+
+  .photo-me {
+    width: 15%;
   }
+
+  
 }
