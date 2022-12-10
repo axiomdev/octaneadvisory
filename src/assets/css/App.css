@@ -54,8 +54,10 @@
 
 .p-absolute {
   position: absolute;
-  top: 55px;
+  top: 0px;
   left: 50%;
+  font-family: "Poppins Semi Bold";
+  font-size: 20px;
 }
 
 body {
@@ -88,6 +90,10 @@ h4 {
   font-family: "Poppins Semi Bold";
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
 
 .card-step-items h4 {
@@ -363,9 +369,8 @@ footer {
 }
 
 .contact-top {
-  margin-top: 97px;
+  margin-top: 120px;
   position: fixed;
-  background: #F3F3F3;
   left: 0;
   right: 0;
   z-index: 100;
@@ -376,11 +381,32 @@ footer {
 }
 
 .steps {
-  height: 600px;
   position: relative;
   top: 173px;
-  overflow: hidden;
+}
 
+.input {
+  width: 94%;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: "Poppins Semi Bold";
+  font-size: 25px;
+}
+
+.step-question .button-input {
+  
+  margin-top: 10px;
+  width: 40%;
+  background: var(--primary-color);
+    border-radius: 30px;
+    font-family: "Poppins Semi Bold";
+    height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    color: #F3F3F3;
+    cursor: pointer;
 }
 
 .card-step-desktop {
@@ -439,6 +465,16 @@ footer {
   border: 1px solid #C1AD89;
 }
 
+.contact-me-desktop {
+  display: none;
+}
+
+label {
+  color: #F3F3F3;
+}
+
+
+
 @media (min-width: 1000px) {
   header {
     padding-left: 60px;
@@ -496,11 +532,30 @@ footer {
     margin-top: 200px;
   }
 
+  .line-percent {
+    width: 80%;
+    margin: auto;
+  }
 
+
+  .contact-top {
+margin-top: 160px;
+  }
+
+  .steps {
+    top: 230px;
+  }
 
   .photo-me {
     width: 15%;
   }
 
+  .step-question select {
+    width: 86%;
+  }
+
+  .input {
+    width: 85%;
+  }
   
 }

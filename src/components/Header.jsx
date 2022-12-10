@@ -41,7 +41,7 @@ function Header() {
 					</a>
 					
 				</div>
-				<Link class="link-nav" to="/contact">
+				<Link class="link-nav contact-me-desktop" to="/contact">
 						Contactez-moi
 					</Link>
 			</header>
