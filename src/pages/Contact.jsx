@@ -116,35 +116,66 @@ function Contact() {
 						trailColor="#adadad"
 						strokeLinecap="round"
 					/>
-					<p className="p-absolute p-absolute-mobile" style={{left: (stepLevel / 11) * 90 + '%'}}>{Math.round(percent)} %</p>
+					<p
+						className="p-absolute p-absolute-mobile"
+						style={{ left: (stepLevel / 11) * 90 + "%" }}
+					>
+						{Math.round(percent)} %
+					</p>
 
-					<p className="p-absolute p-absolute-desktop" style={{left: stepLevel != 0 ? (((stepLevel + 1) / 11) * 90 + '%') : '9%'}}>{Math.round(percent)} %</p>
+					<p
+						className="p-absolute p-absolute-desktop"
+						style={{ left: (stepLevel / 11) * 98 + "%" }}
+					>
+						{Math.round(percent)} %
+					</p>
 				</div>
 			</div>
 			<div className="steps">
 				{steps.map((step, index) => {
-					if (step.type == "select") {
+					if (step.type == "select" && step.class == "block") {
 						return (
 							<div
 								key={step.id}
 								id={`step-${step.id}`}
 								className={
-									"step animate__animated  animate__fadeInDown " + step.class
+									"step animate__animated animate__fadeInLeft " + step.class
 								}
 							>
 								<div className="step-question">
 									<label>{step.question}</label>
 									<select
-										onChange={() => {
+										onChange={(event) => {
+											localStorage.setItem(step.id, event.target.value);
 											setPercent(((index + 1) / steps.length) * 100);
 											setStepLevel(step.id);
+											steps[index].class = "none";
 											steps[index + 1].class = "block";
 										}}
 									>
 										{step.values.map((quest) => (
+											// quest == localStorage.getItem(step.id) ? 'selected' : ''
 											<option key={quest}>{quest}</option>
 										))}
 									</select>
+
+									{stepLevel != 0 ? (
+										<button
+											onClick={() => {
+												setPercent(((index - 1) / steps.length) * 100);
+												setStepLevel(index - 1);
+
+												steps[index].class = "none";
+												steps[index - 1].class = "block";
+											}}
+
+											className="button-cancel"
+										>
+											Revenir
+										</button>
+									) : (
+										""
+									)}
 								</div>
 							</div>
 						);
@@ -154,29 +185,50 @@ function Contact() {
 								key={step.id}
 								id={`step-${step.id}`}
 								className={
-									"step animate__animated  animate__fadeInDown " + step.class
+									"step animate__animated animate__fadeInLeft " + step.class
 								}
 							>
 								<div className="step-question">
 									<label>{step.question}</label>
 
-									<input className="input" />
+									<input
+										className="input"
+										onChange={(event) => {
+											localStorage.setItem(step.id, event.target.value);
+										}}
+										value={localStorage.getItem(step.id)}
+									/>
 									<button
 										className="button-input"
 										onClick={() => {
 											setPercent(((index + 1) / steps.length) * 100);
 											setStepLevel(step.id);
+											steps[index].class = "none";
 											steps[index + 1].class = "block";
 										}}
 									>
 										{" "}
 										Suivant{" "}
 									</button>
+
+									<button
+										onClick={() => {
+											setPercent(((index - 1) / steps.length) * 100);
+											setStepLevel(index - 1);
+
+											steps[index].class = "none";
+											steps[index - 1].class = "block";
+										}}
+									>
+										Revenir
+									</button>
 								</div>
 							</div>
 						);
 					}
 				})}
+
+				{stepLevel == 11 ? <div>Etape Finale</div> : ""}
 				<div ref={messagesEndRef} />
 			</div>
 		</div>
