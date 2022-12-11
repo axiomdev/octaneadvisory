@@ -376,7 +376,7 @@ footer p {
 }
 
 .step {
-	height: 80vh;
+	height: 500px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
