@@ -4,12 +4,12 @@ import { Line } from "rc-progress";
 
 function Contact() {
 	const [percent, setPercent] = useState(0);
-	const [stepLevel, setStepLevel] = useState(1);
+	const [stepLevel, setStepLevel] = useState(0);
 	const [steps, setSteps] = useState([]);
 	const messagesEndRef = useRef(null);
 
 	useEffect(() => {
-		setSteps((current) => [
+		setSteps(() => [
 			{
 				id: 1,
 				type: "select",
@@ -96,7 +96,11 @@ function Contact() {
 	}, [setSteps]);
 
 	const scrollToBottom = () => {
-		messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+		messagesEndRef.current.scrollIntoView({
+			behavior: "smooth",
+			block: "center",
+			inline: "center",
+		});
 	};
 
 	useEffect(scrollToBottom, [stepLevel]);
@@ -107,22 +111,26 @@ function Contact() {
 				<div className="line-percent">
 					<Line
 						percent={percent}
-						strokeWidth={2}
+						strokeWidth={0.1}
 						strokeColor="#C1AD89"
 						trailColor="#adadad"
 						strokeLinecap="round"
 					/>
-					<p className="p-absolute">{Math.round(percent)} %</p>
+					<p className="p-absolute p-absolute-mobile" style={{left: (stepLevel / 11) * 90 + '%'}}>{Math.round(percent)} %</p>
+
+					<p className="p-absolute p-absolute-desktop" style={{left: stepLevel != 0 ? (((stepLevel + 1) / 11) * 86 + '%') : '9%'}}>{Math.round(percent)} %</p>
 				</div>
 			</div>
 			<div className="steps">
 				{steps.map((step, index) => {
-					if (step.type == "select" && step.class == "block") {
+					if (step.type == "select") {
 						return (
 							<div
 								key={step.id}
 								id={`step-${step.id}`}
-								className={"step " + step.class}
+								className={
+									"step animate__animated  animate__fadeInDown " + step.class
+								}
 							>
 								<div className="step-question">
 									<label>{step.question}</label>
@@ -145,25 +153,25 @@ function Contact() {
 							<div
 								key={step.id}
 								id={`step-${step.id}`}
-								className={"step " + step.class}
+								className={
+									"step animate__animated  animate__fadeInDown " + step.class
+								}
 							>
 								<div className="step-question">
 									<label>{step.question}</label>
-									
-										<input className="input" />
-										<button
+
+									<input className="input" />
+									<button
 										className="button-input"
-											onClick={() => {
-												scrollToBottom();
-												setPercent(((index + 1) / steps.length) * 100);
-												setStepLevel(step.id);
-												steps[index + 1].class = "block";
-											}}
-										>
-											{" "}
-											Suivant{" "}
-										</button>
-									
+										onClick={() => {
+											setPercent(((index + 1) / steps.length) * 100);
+											setStepLevel(step.id);
+											steps[index + 1].class = "block";
+										}}
+									>
+										{" "}
+										Suivant{" "}
+									</button>
 								</div>
 							</div>
 						);

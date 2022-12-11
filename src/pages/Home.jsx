@@ -1,5 +1,3 @@
-import logo from "../assets/images/octane-logo.png";
-import background from "../assets/images/home-background.jpeg";
 import schema1 from "../assets/images/schema-1.png";
 import firstStep from "../assets/images/first-step-1.png";
 import secondStep from "../assets/images/second-step.png";
@@ -10,12 +8,10 @@ import gif from "../assets/images/video-tableau-de-bord.gif";
 import photoMe from "../assets/images/mendel-drai.jpg";
 import "../assets/css/App.css";
 import Typed from "react-typed";
-import Hamburger from "hamburger-react";
-import { useEffect, useState } from "react";
-import { Line } from "rc-progress";
 import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import Footer from '../components/Footer';
 
 function Home() {
 	const steps_methodology = [
@@ -94,36 +90,38 @@ function Home() {
 				</div>
 
 				<section className="margin-left-right">
-					<div className="double-titles">
-						<h2>
-							<span>Pourquoi</span> piloter la performance de son entreprise ?
-						</h2>
-						<h3>Pourquoi</h3>
-						<span className="double-titles-line"></span>
+					<div id="pourquoi">
+						<div className="double-titles">
+							<h2>
+								<span>Piloter</span> la performance de son entreprise ?
+							</h2>
+							<h3>Pourquoi</h3>
+							<div className="double-titles-line">&nbsp;</div>
+						</div>
+						<div>
+							<p>
+								La création de valeur est une nécessité avant même d’être un
+								but. L’entreprise capte cette valeur dès lors qu’elle atteint le
+								niveau de performance exigé par son équipe dirigeante. Le
+								pilotage de la performance permet d’infléchir la stratégie de
+								l’entreprise, d’optimiser sa rentabilité, de maitriser sa
+								trésorerie et de communiquer la vision stratégique de
+								l’entreprise. En bref, l’entreprise s’inscrit dans une démarche
+								active, réactive et proactive.
+							</p>
+							<img
+								src={schema1}
+								className="schema1"
+								alt="schema-piloter-performance"
+							/>
+						</div>
 					</div>
-					<div>
-						<p>
-							La création de valeur est une nécessité avant même d’être un but.
-							L’entreprise capte cette valeur dès lors qu’elle atteint le niveau
-							de performance exigé par son équipe dirigeante. Le pilotage de la
-							performance permet d’infléchir la stratégie de l’entreprise,
-							d’optimiser sa rentabilité, de maitriser sa trésorerie et de
-							communiquer la vision stratégique de l’entreprise. En bref,
-							l’entreprise s’inscrit dans une démarche active, réactive et
-							proactive.
-						</p>
-						<img
-							src={schema1}
-							className="schema1"
-							alt="schema-piloter-performance"
-						/>
-					</div>
-
 					<div class="double-titles one-line">
 						<h2>
 							<span>C’est </span> anticiper :
 						</h2>
 						<h3>Infléchir</h3>
+						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p>
 						L’entreprise performante devient agile. Elle est capable, non
@@ -141,6 +139,7 @@ function Home() {
 							<span>C’est </span> perfectionner :
 						</h2>
 						<h3>Optimiser</h3>
+						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p>
 						Le pilotage de la performance permet de détecter les
@@ -156,6 +155,7 @@ function Home() {
 							<span>C’est </span> contrôler :
 						</h2>
 						<h3>Maitriser</h3>
+						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p>
 						La gestion de la trésorerie est un levier d’action pour stimuler la
@@ -170,6 +170,7 @@ function Home() {
 							<span>C’est </span> impliquer :
 						</h2>
 						<h3>Communiquer</h3>
+						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p>
 						Le tableau de bord de performance est un outil de dialogue entre la
@@ -186,7 +187,7 @@ function Home() {
 				</section>
 
 				<section className="margin-left-right">
-					<div class="double-titles text-center methodology">
+					<div class="double-titles text-center methodology" id="methodologie">
 						<h2 className="title-methodology">
 							<span>Notre </span> méthodologie
 						</h2>
@@ -250,7 +251,7 @@ function Home() {
 					</div>
 				</section>
 
-				<section className="margin-left-right" id="about-me">
+				<section className="margin-left-right">
 					<div class="double-titles text-center">
 						<h2>
 							<span>A</span> propos de moi
@@ -258,7 +259,7 @@ function Home() {
 						<h3>Qui suis-je ?</h3>
 					</div>
 					<div className="about-me-blocks">
-						<div className="block-photo">
+						<div className="block-photo" id="quisuisje">
 							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
 						</div>
 						<p>
@@ -286,6 +287,7 @@ function Home() {
 					</div>
 				</section>
 			</main>
+			<Footer></Footer>
 		</>
 	);
 }
