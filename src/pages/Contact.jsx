@@ -111,14 +111,14 @@ function Contact() {
 				<div className="line-percent">
 					<Line
 						percent={percent}
-						strokeWidth={0.1}
+						strokeWidth={3}
 						strokeColor="#C1AD89"
 						trailColor="#adadad"
 						strokeLinecap="round"
 					/>
 					<p className="p-absolute p-absolute-mobile" style={{left: (stepLevel / 11) * 90 + '%'}}>{Math.round(percent)} %</p>
 
-					<p className="p-absolute p-absolute-desktop" style={{left: stepLevel != 0 ? (((stepLevel + 1) / 11) * 86 + '%') : '9%'}}>{Math.round(percent)} %</p>
+					<p className="p-absolute p-absolute-desktop" style={{left: stepLevel != 0 ? (((stepLevel + 1) / 11) * 90 + '%') : '9%'}}>{Math.round(percent)} %</p>
 				</div>
 			</div>
 			<div className="steps">

@@ -641,5 +641,6 @@ label {
 	
 	.p-absolute-desktop {
 		display: flex;
+		top: -6px;
 	}
 }
