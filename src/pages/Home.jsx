@@ -188,7 +188,7 @@ function Home() {
 					</div>
 				</section>
 
-				<section className="margin-left-right">
+				<section className="margin-left-right margin-top-bottom">
 					<div class="double-titles text-center methodology" id="methodologie">
 						<h2 className="title-methodology">
 							<span>Notre </span> méthodologie

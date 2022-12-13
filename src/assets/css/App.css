@@ -72,6 +72,11 @@
 	transition: left .4s;
 }
 
+.margin-top-bottom  {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
 .p-absolute-mobile {
 	display: flex;
 }
@@ -79,8 +84,6 @@
 .p-absolute-desktop {
 	display: none;
 }
-
-
 
 body {
 	--primary-color: #c1ad89;
@@ -238,6 +241,12 @@ footer {
     align-items: center;
 }
 
+footer .footer-social-network {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 50px;
+}
+
 footer p {
 	color: #222222;
 }
@@ -294,6 +303,10 @@ footer p {
 	padding: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+.recap {
+	color: #F3F3F3;
 }
 
 .menu {
