@@ -106,7 +106,7 @@ h3 {
 	text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
-	
+	height: 60px;
 }
 
 h4 {
@@ -224,17 +224,18 @@ header {
 
 footer {
 	font-family: "Roboto Regular";
-	text-align: center;
 	height: 150px;
 	padding: 20px;
 	background: #F3F3F3;
 	color: #222222;
-	line-height: 29px;
+	position: relative;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	position: relative;
-	/* width: 100%; */
-	bottom: 0;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
@@ -300,21 +301,41 @@ footer p {
 	width: 100%;
 	background: rgba(255, 255, 255, 0.801);
 	top: 100px;
-	height: 88vh;
+	height: 300px;
+	z-index: 10;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition:height 0.3s ease-in-out;
+}
+
+.d-none {
+	display: none;
+	height: 0px;
+}
+
+.menu div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	padding-top: 100px;
-	z-index: 10;
-	left: 0;
-	transition: height 300ms linear;
+	justify-content: space-around;
+	height: 80%;
+	transition:all 0.3s ease-in-out;
 }
 
 .schema1 {
-	width: 100%;
-	margin-top: 30px;
+	width: 300px;
 }
+
+.why-block div {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+}
+
 
 .item img {
 	width: 200px;
@@ -353,6 +374,7 @@ footer p {
 	top: -8px;
 	left: 44%;
 	font-size: 60px;
+	color: #c1ad89;
 }
 
 .card-step div {
@@ -443,7 +465,7 @@ footer p {
 
 .steps {
 	position: relative;
-	top: 173px;
+	top: 100px;
 }
 
 .input {
@@ -505,6 +527,8 @@ footer p {
 
 .block-photo {
 	height: 40%;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .button-hero {
@@ -533,9 +557,10 @@ label {
 }
 
 .button-cancel {
+	margin-top: 10px;
 	border: none;
-	height: 30px;
-	width: 160px !important;
+	height: 50px;
+	width: 40%;
 	color: #222222;
 	background: var(--primary-color);
 	border-radius: 30px;
@@ -548,10 +573,17 @@ label {
 	background: linear-gradient(90deg, rgba(175,174,190,1) 0%, rgba(246,246,251,1) 0%, rgba(238,238,243,1) 15%, rgba(182,182,190,1) 47%, rgba(239,239,245,1) 71%);
 }
 
+.d-flex-center {
+	display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 @media (min-width: 1000px) {
 	header {
 		padding-left: 60px;
 		padding-right: 60px;
+		margin: auto;
 	}
 
 	h1 {
@@ -561,6 +593,7 @@ label {
 	h3 {
 		font-size: 100px;
 		top: -40px;
+		height: 100px;
 	}
 
 	.double-titles h2 {
@@ -648,7 +681,7 @@ label {
 	}
 
 	.methodology h2 {
-		width: 87%;
+		width: 90%;
 	}
 
 	.methodology {
@@ -665,9 +698,31 @@ label {
 	
 	.p-absolute-desktop {
 		display: flex;
-		top: -42px;
+		top: -34px;
 		width: 50px;
 		height: 50px;
 		font-size: 15px;
+	}
+
+	.why-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.why-block p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+
+	.margin-left-right {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	#pourquoi .double-titles {
+		margin-bottom: 0px;
 	}
 }

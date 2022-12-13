@@ -98,7 +98,7 @@ function Home() {
 							<h3>Pourquoi</h3>
 							<div className="double-titles-line">&nbsp;</div>
 						</div>
-						<div>
+						<div className="why-block">
 							<p>
 								La création de valeur est une nécessité avant même d’être un
 								but. L’entreprise capte cette valeur dès lors qu’elle atteint le
@@ -109,11 +109,13 @@ function Home() {
 								l’entreprise. En bref, l’entreprise s’inscrit dans une démarche
 								active, réactive et proactive.
 							</p>
+							<div>
 							<img
 								src={schema1}
 								className="schema1"
 								alt="schema-piloter-performance"
 							/>
+							</div>
 						</div>
 					</div>
 					<div class="double-titles one-line">

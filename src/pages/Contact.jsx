@@ -7,12 +7,14 @@ function Contact() {
 	const [stepLevel, setStepLevel] = useState(0);
 	const [steps, setSteps] = useState([]);
 	const messagesEndRef = useRef(null);
+	const [activitySector, setActivitySector] = useState(localStorage.getItem("1"));
 
 	useEffect(() => {
 		setSteps(() => [
 			{
 				id: 1,
 				type: "select",
+				name: "activity_sector",
 				question: "Quel est votre secteur dactivité ?",
 				values: ["Expertise comptable", "Footballeur", "Ingenieur sécyruité"],
 				class: "block",
@@ -20,6 +22,7 @@ function Contact() {
 			{
 				id: 2,
 				type: "select",
+				name: "activity_sector",
 				question: "Mon entreprise existe depuis",
 				values: ["Moins d'un an", "Entre 1 et 10 ans", "Plus de 10 ans"],
 				class: stepLevel == 2 ? "block" : "none",
@@ -111,7 +114,7 @@ function Contact() {
 				<div className="line-percent">
 					<Line
 						percent={percent}
-						strokeWidth={3}
+						strokeWidth={1}
 						strokeColor="#C1AD89"
 						trailColor="#adadad"
 						strokeLinecap="round"
@@ -155,7 +158,7 @@ function Contact() {
 									>
 										{step.values.map((quest) => (
 											// quest == localStorage.getItem(step.id) ? 'selected' : ''
-											<option key={quest}>{quest}</option>
+											<option key={quest} selected={quest == localStorage.getItem(step.id)}>{quest}</option>
 										))}
 									</select>
 
@@ -168,7 +171,6 @@ function Contact() {
 												steps[index].class = "none";
 												steps[index - 1].class = "block";
 											}}
-
 											className="button-cancel"
 										>
 											Revenir
@@ -198,30 +200,32 @@ function Contact() {
 										}}
 										value={localStorage.getItem(step.id)}
 									/>
-									<button
-										className="button-input"
-										onClick={() => {
-											setPercent(((index + 1) / steps.length) * 100);
-											setStepLevel(step.id);
-											steps[index].class = "none";
-											steps[index + 1].class = "block";
-										}}
-									>
-										{" "}
-										Suivant{" "}
-									</button>
 
-									<button
-										onClick={() => {
-											setPercent(((index - 1) / steps.length) * 100);
-											setStepLevel(index - 1);
-
-											steps[index].class = "none";
-											steps[index - 1].class = "block";
-										}}
-									>
-										Revenir
-									</button>
+									<div className="d-flex-center">
+										<button
+											onClick={() => {
+												setPercent(((index - 1) / steps.length) * 100);
+												setStepLevel(index - 1);
+												steps[index].class = "none";
+												steps[index - 1].class = "block";
+											}}
+											className="button-cancel"
+										>
+											Revenir
+										</button>
+										<button
+											className="button-input"
+											onClick={() => {
+												setPercent(((index + 1) / steps.length) * 100);
+												setStepLevel(step.id);
+												steps[index].class = "none";
+												steps[index + 1].class = "block";
+											}}
+										>
+											{" "}
+											Suivant{" "}
+										</button>
+									</div>
 								</div>
 							</div>
 						);

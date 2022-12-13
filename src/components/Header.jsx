@@ -13,33 +13,60 @@ function Header() {
 				<Link to="/" onClick={() => setOpen(false)}>
 					<img src={logo} className="header-logo" alt="logo" />
 				</Link>
-				<Hamburger toggled={isOpen} toggle={setOpen} className="burger" />
+				<Hamburger
+					toggled={isOpen}
+					toggle={setOpen}
+					onToggle={(toggled) =>
+						toggled
+							? (document.body.style.overflow = "hidden")
+							: (document.body.style.overflow = "scroll")
+					}
+					className="burger"
+				/>
 
-				{isOpen ? (
-					<div class="menu" onClick={() => setOpen(false)}>
-						<Link class="link-nav" to="/contact" onClick={() => setOpen(false)}>
-							Contactez-moi
-						</Link>
+			
+					<div
+						className={`menu ${!isOpen ? "d-none" : "d-block"}`}
+						onClick={() => {
+							setOpen(false);
+							document.body.style.overflow = "scroll";
+						}}
+					>
+						<div>
+							<AnchorLink offset="150" class="link-nav" href="#pourquoi">
+								Pourquoi
+							</AnchorLink>
+							<AnchorLink offset="150" class="link-nav" href="#methodologie">
+								Methodologie
+							</AnchorLink>
+							<AnchorLink offset="10" class="link-nav" href="#quisuisje">
+								Qui suis-je
+							</AnchorLink>
+							<Link
+								class="link-nav"
+								to="/contact"
+								onClick={() => setOpen(false)}
+							>
+								Contactez-moi
+							</Link>
+						</div>
 					</div>
-				) : (
-					""
-				)}
+				
 				<div class="menu-desktop">
 					<AnchorLink offset="150" class="link-nav" href="#pourquoi">
-						Pourquoi 
+						Pourquoi
 					</AnchorLink>
 					<AnchorLink offset="150" class="link-nav" href="#methodologie">
 						Methodologie
 					</AnchorLink>
 					<AnchorLink offset="10" class="link-nav" href="#quisuisje">
-						Qui suis-je 
+						Qui suis-je
 					</AnchorLink>
 
 					<Link class="link-nav contact-me-desktop" to="/contact">
-					Contactez-moi
-				</Link>
+						Contactez-moi
+					</Link>
 				</div>
-				
 			</header>
 		</>
 	);
