@@ -43,7 +43,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 5px;
-	color: #232323;
+	color: #222222;
 }
 
 .block {
@@ -143,7 +143,7 @@ select:focus {
 }
 
 .card-step-items p {
-	color: #232323;
+	color: #222222;
 }
 
 .card-step-items img {
@@ -232,7 +232,7 @@ select:focus {
 }
 
 .h3-step {
-	font-size: 28px !important;
+	font-size: 40px;
 }
 
 .double-titles .h3-step {
