@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./assets/css/App.css";
+import "./assets/css/responsive.css";
 
 function App() {
 	const [contact, setContact] = useState(false);

@@ -1,0 +1,246 @@
+@media (min-width: 1000px) {
+	header {
+		padding-left: 60px;
+		padding-right: 60px;
+		margin: auto;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h3 {
+		font-size: 100px;
+		top: -40px;
+		height: 109px;
+	}
+
+	.double-titles h2 {
+		font-size: 50px;
+	}
+
+	.hero-block-texts p {
+		font-size: 20px;
+	}
+
+	.margin-left-right {
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+
+	.hamburger-react {
+		display: none;
+	}
+
+	.menu-desktop {
+		display: block;
+		width: 63%;
+		padding-left: 10%;
+	}
+
+	.menu-desktop a {
+		margin-right: 80px;
+	}
+
+	.schema1 {
+		width: 400px;
+	}
+
+	.card-step-desktop {
+		display: flex;
+		margin-top: 50px;
+	}
+
+	.card-step {
+		width: 19.5%;
+		margin: 9px;
+	}
+
+	.card-step-mobile {
+		display: none;
+	}
+
+	.hero-block-texts {
+		padding: 40px;
+		width: 40%;
+		margin-top: 200px;
+	}
+
+	.line-percent {
+		width: 80%;
+		margin: auto;
+	}
+
+	.contact-top {
+		margin-top: 160px;
+	}
+
+	.steps {
+		top: 230px;
+	}
+
+	.photo-me {
+		width: 15%;
+	}
+
+	.step-question select {
+		width: 86%;
+	}
+
+	.input {
+		width: 85%;
+	}
+
+	.video img {
+		width: 40%;
+	}
+
+	.title-methodology {
+		height: 120px;
+	}
+
+	.methodology h2 {
+		width: 90%;
+	}
+
+	.methodology {
+		height: 120px;
+	}
+
+	.p-absolute {
+		top: -10px;
+	}
+
+	.p-absolute-mobile {
+		display: none;
+	}
+
+	.p-absolute-desktop {
+		display: flex;
+		top: -34px;
+		width: 50px;
+		height: 50px;
+		font-size: 15px;
+	}
+
+	.why-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.why-block p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+
+	.margin-left-right {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	#pourquoi .double-titles {
+		margin-bottom: 0px;
+	}
+
+	.line-first-title {
+		margin-top: -40px;
+	}
+
+	.double-titles-line {
+		margin-top: -44px;
+	}
+
+	.block-explicative {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.block-explicative-optimize {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 120px;
+		margin-bottom: 120px;
+	}
+
+	.img-box {
+		width: 100%;
+	}
+
+	.block-explicative-block {
+		width: 45%;
+	}
+
+	.video {
+		margin-bottom: 100px;
+	}
+
+	.margin-top-bottom {
+		margin-top: 100px;
+	}
+
+	.image-adjust {
+		width: 50%;
+		display: flex;
+		justify-content: end;
+	}
+
+	.img-box-communicate {
+		height: 350px;
+	}
+
+	.image-adjust-start {
+		width: 50%;
+		display: flex;
+		justify-content: start;
+	}
+
+	.communicate-title {
+		font-size: 82px;
+	}
+
+	.whoami {
+		margin-top: 180px;
+	}
+
+	.center-image {
+		margin: auto;
+	}
+
+	.video-section {
+		margin-bottom: 140px;
+		flex-direction: row;
+		padding: 50px;
+	}
+
+	.video-section .text {
+		width: 40%;
+	}
+
+	.video-section .text p {
+		font-size: 40px;
+		width: 100%;
+	}
+
+	.video-section .center-image {
+		width: 50%;
+		margin-right: 0px;
+		justify-content: end;
+	}
+
+	.methodology-section {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.h3-step {
+		height: 100%;
+	}
+}

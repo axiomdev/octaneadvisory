@@ -130,6 +130,8 @@ function Home() {
 								alt="schema-piloter-performance"
 							/>
 						</div>
+
+						
 					</div>
 
 					<div className="block-explicative">
@@ -153,25 +155,29 @@ function Home() {
 								cause.
 							</p>
 						</div>
-						<div className="center-image">
-							<div className="div-bb">
-								<img
-									src={inflechir}
-									alt="img-cube-inflechir"
-									className="img-box"
-								/>
+						<div className="image-adjust">
+							<div className="center-image">
+								<div className="div-bb">
+									<img
+										src={inflechir}
+										alt="img-cube-inflechir"
+										className="img-box"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<div className="block-explicative-optimize">
-						<div className="center-image">
-							<div className="div-bb">
-								<img
-									src={optimiser}
-									alt="img-cube-optimiser"
-									className="img-box"
-								/>
+						<div className="image-adjust-start">
+							<div className="center-image">
+								<div className="div-bb">
+									<img
+										src={optimiser}
+										alt="img-cube-optimiser"
+										className="img-box"
+									/>
+								</div>
 							</div>
 						</div>
 						<div className="block-explicative-block">
@@ -209,25 +215,29 @@ function Home() {
 								d’investissements et gagne de nouvelle part de marché.
 							</p>
 						</div>
-						<div className="center-image">
-							<div className="div-bb">
-								<img
-									src={maitriser}
-									alt="img-cube-inflechir"
-									className="img-box"
-								/>
+						<div className="image-adjust">
+							<div className="center-image">
+								<div className="div-bb">
+									<img
+										src={maitriser}
+										alt="img-cube-inflechir"
+										className="img-box"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<div className="block-explicative-optimize">
-						<div className="center-image">
-							<div className="div-bb">
-								<img
-									src={communiquer}
-									alt="img-cube-optimiser"
-									className="img-box"
-								/>
+						<div className="image-adjust-start">
+							<div className="center-image">
+								<div className="div-bb">
+									<img
+										src={communiquer}
+										alt="img-cube-optimiser"
+										className="img-box img-box-communicate"
+									/>
+								</div>
 							</div>
 						</div>
 						<div className="block-explicative-block">
@@ -235,7 +245,7 @@ function Home() {
 								<h2>
 									<span>C’est </span> impliquer :
 								</h2>
-								<h3>Communiquer</h3>
+								<h3 className="communicate-title">Communiquer</h3>
 								<div className="double-titles-line">&nbsp;</div>
 							</div>
 							<p>
@@ -250,23 +260,27 @@ function Home() {
 							</p>
 						</div>
 					</div>
+					
 				</section>
 
-				<section className="margin-left-right margin-top-bottom">
-					<div className="video">
+				<section className="margin-left-right margin-top-bottom video-section">
+					<div className="text">
 						<p>
 							Votre outil d’aide à la prise de décision personnalisée et adaptée
 							à vos besoins
 						</p>
+						<Link to="/contact" className="button-contact button-contact-outil">
+							Contactez moi
+						</Link>
 					</div>
 					<div className="center-image">
-						<div className="div-bb">
+						<div className="div-bb video-section-bb">
 							<img class="img-box" src={gif} />
 						</div>
 					</div>
 				</section>
 
-				<section className="margin-left-right margin-top-bottom">
+				<section className="methodology-section margin-top-bottom">
 					<div class="double-titles text-center methodology" id="methodologie">
 						<h2 className="title-methodology">
 							<span>Notre </span> méthodologie
@@ -288,7 +302,7 @@ function Home() {
 						<div className="card-step-mobile">
 							<Carousel
 								showArrows={false}
-								showIndicators={false}
+								showIndicators={true}
 								showStatus={false}
 								centerMode={false}
 							>
@@ -341,7 +355,7 @@ function Home() {
 					</div>
 				</section>
 
-				<section className="margin-left-right">
+				<section className="margin-left-right whoami">
 					<div class="double-titles text-center">
 						<h2>
 							<span>A</span> propos de moi
@@ -349,9 +363,6 @@ function Home() {
 						<h3>Qui suis-je ?</h3>
 					</div>
 					<div className="about-me-blocks" id="quisuisje">
-						<div className="block-photo">
-							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
-						</div>
 						<p>
 							Je m’appelle{" "}
 							<a
@@ -374,6 +385,9 @@ function Home() {
 							exigences. L’écoute et la sagesse constituent le socle sur lequel
 							repose ma philosophie managériale.
 						</p>
+						<div className="block-photo">
+							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
+						</div>
 					</div>
 				</section>
 			</main>

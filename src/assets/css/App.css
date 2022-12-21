@@ -222,15 +222,17 @@ select:focus {
 }
 
 .h2-step {
-	top: 83px
+	top: 83px;
+	text-align: center;
 }
 
-.h2-step, .h2-step span {
+.h2-step,
+.h2-step span {
 	font-size: 22px !important;
 }
 
 .h3-step {
-	font-size: 40px !important;
+	font-size: 28px !important;
 }
 
 .double-titles .h3-step {
@@ -246,15 +248,19 @@ select:focus {
 	background-image: #222222;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	
 }
 
 p {
 	font-family: "Roboto Regular";
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 1.4;
 	text-align: justify;
 	color: rgba(255, 255, 255, 0.85);
+}
+
+p a {
+	font-size: 19px;
+	color: #f3f3f3;
 }
 
 header {
@@ -295,6 +301,7 @@ footer .footer-social-network {
 
 footer p {
 	color: #222222;
+	text-align: center;
 }
 
 .header-logo {
@@ -349,6 +356,29 @@ footer p {
 	padding: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+.button-contact {
+	border: none;
+	height: 45px;
+	width: 200px !important;
+	color: #f3f3f3;
+	background: var(--primary-color);
+	border-radius: 30px;
+	font-family: "Poppins Semi Bold";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button-contact-explications {
+	margin-top: 40px;
+}
+
+.button-contact-outil {
+	margin-top: 20px;
 }
 
 .recap {
@@ -426,7 +456,6 @@ footer p {
 	line-height: 15px;
 	margin: auto;
 	margin-top: 70px;
-	height: 500px;
 }
 
 .about-me-blocks {
@@ -596,7 +625,7 @@ footer p {
 .block-photo {
 	height: 40%;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 .button-hero {
@@ -682,7 +711,6 @@ label {
 }
 
 .div-bb {
-
 	background-image: -webkit-linear-gradient(
 		left,
 		#c1ad89,
@@ -704,191 +732,22 @@ label {
 	z-index: 9;
 }
 
-@media (min-width: 1000px) {
-	header {
-		padding-left: 60px;
-		padding-right: 60px;
-		margin: auto;
-	}
+.video-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #f3f3f3;
+	border-radius: 25px;
+	padding-top: 10px;
+}
 
-	h1 {
-		font-size: 50px;
-	}
+.video-section .text p {
+	font-size: 20px;
+	font-family: "Poppins Bold";
+	color: #222222;
+}
 
-	h3 {
-		font-size: 100px;
-		top: -40px;
-		height: 100px;
-	}
-
-	.double-titles h2 {
-		font-size: 50px;
-	}
-
-	.hero-block-texts p {
-		font-size: 20px;
-	}
-
-	.margin-left-right {
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	.hamburger-react {
-		display: none;
-	}
-
-	.menu-desktop {
-		display: block;
-		width: 63%;
-		padding-left: 10%;
-	}
-
-	.menu-desktop a {
-		margin-right: 80px;
-	}
-
-	.schema1 {
-		width: 400px;
-	}
-
-	.card-step-desktop {
-		display: flex;
-		margin-top: 50px;
-	}
-
-	.card-step {
-		width: 18%;
-		margin: 9px;
-	}
-
-	.card-step-mobile {
-		display: none;
-	}
-
-	.hero-block-texts {
-		padding: 40px;
-		width: 40%;
-		margin-top: 200px;
-	}
-
-	.line-percent {
-		width: 80%;
-		margin: auto;
-	}
-
-	.contact-top {
-		margin-top: 160px;
-	}
-
-	.steps {
-		top: 230px;
-	}
-
-	.photo-me {
-		width: 15%;
-	}
-
-	.step-question select {
-		width: 86%;
-	}
-
-	.input {
-		width: 85%;
-	}
-
-	.video img {
-		width: 40%;
-	}
-
-	.title-methodology {
-		height: 120px;
-	}
-
-	.methodology h2 {
-		width: 90%;
-	}
-
-	.methodology {
-		height: 120px;
-	}
-
-	.p-absolute {
-		top: -10px;
-	}
-
-	.p-absolute-mobile {
-		display: none;
-	}
-
-	.p-absolute-desktop {
-		display: flex;
-		top: -34px;
-		width: 50px;
-		height: 50px;
-		font-size: 15px;
-	}
-
-	.why-block {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.why-block p {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 50%;
-	}
-
-	.margin-left-right {
-		max-width: 1200px;
-		margin: auto;
-	}
-
-	#pourquoi .double-titles {
-		margin-bottom: 0px;
-	}
-
-	.line-first-title {
-		margin-top: -40px;
-	}
-
-	.double-titles-line {
-		margin-top: -44px;
-	}
-
-	.block-explicative {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-direction: row;
-		margin-top: 100px;
-		margin-bottom: 100px;
-	}
-
-	.block-explicative-optimize {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-top: 120px;
-		margin-bottom: 120px;
-	}
-
-	.img-box {
-		width: 40%;
-	}
-
-	.block-explicative-block {
-		width: 53%;
-	}
-
-	.video {
-		margin-bottom: 100px;
-	}
-
-	.margin-top-bottom {
-		margin-top: 100px;
-	}
+.video-section-bb {
+	left: -28px;
 }
