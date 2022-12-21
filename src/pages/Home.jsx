@@ -22,35 +22,45 @@ function Home() {
 		{
 			id: 1,
 			step_number: "I",
-			title: "Diagnostiquer (Où en est-on ?)",
+			title: "Diagnostiquer",
+			presub: "Où",
+			subtitle: " en est-on ?",
 			icon_path: firstStep,
 			text: "Un état des lieux s’articule autour d’un diagnostic stratégique et financier. Cette analyse doit permettre d’identifier les facteurs clés de succès et de risques de l’entreprise.",
 		},
 		{
 			id: 2,
 			step_number: "II",
-			title: "Définir (Où va-t-on ?)",
+			title: "Définir",
+			presub: "Où",
+			subtitle: " va-t-on ?",
 			icon_path: secondStep,
 			text: "Il est question de définir les objectifs de l’entreprise dans un plan d’action. Un horizon temporel cadre les actions stratégiques (long terme) et opérationnelles (moyen terme et court terme).",
 		},
 		{
 			id: 3,
 			step_number: "III",
-			title: "Piloter (Comment on y va ?)",
+			title: "Piloter",
+			presub: "Comment",
+			subtitle: " on y va ?",
 			icon_path: thirdStep,
 			text: "Une fois le cap défini, un tableau de bord stratégique et opérationnel permettent de piloter les actions à entreprendre. Des indicateurs clés de performance sont choisis et conçus pour déployer la stratégie de l’entreprise.",
 		},
 		{
 			id: 4,
 			step_number: "IV",
-			title: "Evaluer (Est-ce qu’on y est arrivé ?)",
+			title: "Evaluer",
+			presub: "Est-ce ",
+			subtitle: "qu’on y est arrivé ?",
 			icon_path: fourthStep,
 			text: "Il convient d’identifier et d’analyser les écarts entre les prévisions et les réalisations. Ces signaux doivent susciter la réflexion des équipes concernées pour mieux comprendre les causes et ses effets sur l’entreprise.",
 		},
 		{
 			id: 5,
 			step_number: "V",
-			title: "Corriger (Qu’est-ce qui ne va pas ?)",
+			title: "Corriger",
+			presub: "Qu’est-ce ",
+			subtitle: "qui ne va pas ?",
 			icon_path: fifthStep,
 			text: "Pour affiner la stratégie, l’équipe dirigeante doit mener des actions correctives. Elles doivent permettre d’aligner les prévisions sur les réalités stratégiques et opérationnelles. À terme et, par ce processus de gestion de la performance, l’entreprise devient plus réactive face à son environnement.",
 		},
@@ -178,7 +188,6 @@ function Home() {
 								le but de prendre des décisions éclairées, pour optimiser la
 								rentabilité. Il est alors possible de prendre des décisions
 								d’internalisation ou d’externalisation des maillons non
-								stratégique de la chaine de valeur.
 							</p>
 						</div>
 					</div>
@@ -249,14 +258,12 @@ function Home() {
 							Votre outil d’aide à la prise de décision personnalisée et adaptée
 							à vos besoins
 						</p>
-
-						
 					</div>
 					<div className="center-image">
-							<div className="div-bb">
-								<img class="img-box" src={gif} />
-							</div>
+						<div className="div-bb">
+							<img class="img-box" src={gif} />
 						</div>
+					</div>
 				</section>
 
 				<section className="margin-left-right margin-top-bottom">
@@ -290,7 +297,12 @@ function Home() {
 										<div className="card-step">
 											<span>{step.step_number}</span>
 											<div class="card-step-items">
-												<h4>{step.title}</h4>
+												<div class="double-titles">
+													<h2 className="h2-step">
+														<span>{step.presub} </span> {step.subtitle}
+													</h2>
+													<h3 className="h3-step">{step.title}</h3>
+												</div>
 												<img
 													className="logo-step"
 													src={step.icon_path}
@@ -309,8 +321,12 @@ function Home() {
 									<div className="card-step">
 										<span>{step.step_number}</span>
 										<div class="card-step-items">
-											<h4>{step.title}</h4>
-
+											<div class="double-titles">
+												<h2 className="h2-step">
+													<span>{step.presub} </span> {step.subtitle}
+												</h2>
+												<h3 className="h3-step">{step.title}</h3>
+											</div>
 											<img
 												className="logo-step"
 												src={step.icon_path}
@@ -332,8 +348,8 @@ function Home() {
 						</h2>
 						<h3>Qui suis-je ?</h3>
 					</div>
-					<div className="about-me-blocks">
-						<div className="block-photo" id="quisuisje">
+					<div className="about-me-blocks" id="quisuisje">
+						<div className="block-photo">
 							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
 						</div>
 						<p>
