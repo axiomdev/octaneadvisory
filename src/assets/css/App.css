@@ -186,7 +186,7 @@ select:focus {
 	background-image: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	z-index: 1000;
+	z-index: 99;
 	position: relative;
 }
 
