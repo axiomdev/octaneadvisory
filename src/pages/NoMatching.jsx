@@ -1,13 +1,5 @@
-import logo from "../assets/images/octane-logo.png";
-import background from "../assets/images/home-background.jpeg";
-import schema1 from "../assets/images/schema-1.png";
-import firstStep from "../assets/images/first-step-1.png";
 import "../assets/css/App.css";
-import Typed from "react-typed";
-import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
-import { Line, Circle } from "rc-progress";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 function NoMatching() {
 	const [isOpen, setOpen] = useState(false);

@@ -1,5 +1,5 @@
 import schema1 from "../assets/images/schema-1.png";
-import firstStep from "../assets/images/first-step-1.png";
+import firstStep from "../assets/images/first-step.png";
 import secondStep from "../assets/images/second-step.png";
 import thirdStep from "../assets/images/third-step.png";
 import fourthStep from "../assets/images/fourth-step.png";
@@ -14,10 +14,34 @@ import "../assets/css/App.css";
 import Typed from "react-typed";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 
 function Home() {
+	const responsive = {
+		superLargeDesktop: {
+			breakpoint: { max: 4000, min: 1490 },
+			items: 5,
+		},
+		desktop: {
+			breakpoint: { max: 1490, min: 1200 },
+			items: 4,
+		},
+		stablet: {
+			breakpoint: { max: 1200, min: 900 },
+			items: 3,
+		},
+		tablet: {
+			breakpoint: { max: 900, min: 700 },
+			items: 2,
+		},
+		mobile: {
+			breakpoint: { max: 700, min: 0 },
+			items: 1,
+		},
+	};
+
 	const steps_methodology = [
 		{
 			id: 1,
@@ -93,11 +117,11 @@ function Home() {
 						</h1>
 						<p>
 							Ma mission est de capter et délivrer la valeur de votre entreprise
-							en alignant « finance et stratégie ».
+							en alignant « stratégie et finance ».
 						</p>
 						<div className="button-hero">
 							<Link to="/contact" className="button">
-								Contactez moi
+								Contactez-moi
 							</Link>
 						</div>
 					</div>
@@ -130,8 +154,6 @@ function Home() {
 								alt="schema-piloter-performance"
 							/>
 						</div>
-
-						
 					</div>
 
 					<div className="block-explicative">
@@ -260,17 +282,17 @@ function Home() {
 							</p>
 						</div>
 					</div>
-					
 				</section>
 
 				<section className="margin-left-right margin-top-bottom video-section">
 					<div className="text">
 						<p>
-							Votre outil d’aide à la prise de décision personnalisée et adaptée
-							à vos besoins
+							Votre outil d’aide à la prise de décision{" "}
+							<span className="text-beige">personnalisée</span> et adaptée à{" "}
+							<span className="text-beige">vos besoins</span>
 						</p>
 						<Link to="/contact" className="button-contact button-contact-outil">
-							Contactez moi
+							Contactez-moi
 						</Link>
 					</div>
 					<div className="center-image">
@@ -283,11 +305,13 @@ function Home() {
 				<section className="methodology-section margin-top-bottom">
 					<div class="double-titles text-center methodology" id="methodologie">
 						<h2 className="title-methodology">
-							<span>Notre </span> méthodologie
+							<span className="title-methodology-subtitle">Processing</span>
+							<div className="double-titles-line">&nbsp;</div>
 						</h2>
 						<h3>Methodologie</h3>
+						
 					</div>
-					<p>
+					<p className="methodology-text">
 						J’adopte une méthodologie rigoureuse qui consiste à passer 95% de
 						mon temps à définir correctement votre problème et les 5% restants,
 						à trouver une solution optimale. Ce processus fait appel à la
@@ -300,16 +324,13 @@ function Home() {
 
 					<div class="wrapper">
 						<div className="card-step-mobile">
-							<Carousel
-								showArrows={false}
-								showIndicators={true}
-								showStatus={false}
-								centerMode={false}
-							>
+							<Carousel responsive={responsive} infinite={false}>
 								{steps_methodology.map((step, index) => {
 									return (
 										<div className="card-step">
-											<span>{step.step_number}</span>
+											<span className={"step-" + step.step_number}>
+												{step.step_number}
+											</span>
 											<div class="card-step-items">
 												<div class="double-titles">
 													<h2 className="h2-step">
@@ -328,29 +349,7 @@ function Home() {
 									);
 								})}
 							</Carousel>
-						</div>
-						<div className="card-step-desktop">
-							{steps_methodology.map((step, index) => {
-								return (
-									<div className="card-step">
-										<span>{step.step_number}</span>
-										<div class="card-step-items">
-											<div class="double-titles">
-												<h2 className="h2-step">
-													<span>{step.presub} </span> {step.subtitle}
-												</h2>
-												<h3 className="h3-step">{step.title}</h3>
-											</div>
-											<img
-												className="logo-step"
-												src={step.icon_path}
-												alt="first-step-logo"
-											/>
-											<p>{step.text}</p>
-										</div>
-									</div>
-								);
-							})}
+							;
 						</div>
 					</div>
 				</section>

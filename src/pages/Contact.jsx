@@ -62,7 +62,7 @@ function Contact() {
 				name: "effectif",
 				display_name: "effectif",
 				question: "Mon effectif salariale est compris entre",
-				values: ["10", "20", "30", "40", "50", "+50"],
+				values: ["0-10", "10-20", "20-30", "30-40", "40-50", "+50"],
 				class: stepLevel == 3 ? "block" : "none",
 			},
 			{
@@ -380,7 +380,7 @@ function Contact() {
 					  },
 					  (
 							<div class="recap">
-								<h1>Etape Finale</h1>
+								<h1>Recaptiulatif</h1>
 								<p>Secteur d'actvité : {localStorage.getItem("1")}</p>
 								<p>
 									Mon entreprise existe depuis : {localStorage.getItem("2")}
