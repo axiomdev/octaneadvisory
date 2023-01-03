@@ -215,7 +215,10 @@ function Home() {
 								dysfonctionnements de la chaine de valeur de l’entreprise, dans
 								le but de prendre des décisions éclairées, pour optimiser la
 								rentabilité. Il est alors possible de prendre des décisions
-								d’internalisation ou d’externalisation des maillons non
+								d’internalisation ou d’externalisation des maillons non stratégique de la chaine de valeur.
+								<br></br>
+								<br></br>
+								<br></br>
 							</p>
 						</div>
 					</div>
@@ -236,6 +239,9 @@ function Home() {
 								plus habile et proactive, saisie de nouvelles opportunités
 								d’investissements et gagne de nouvelle part de marché.
 							</p>
+							<br></br>
+								<br></br>
+								<br></br>
 						</div>
 						<div className="image-adjust">
 							<div className="center-image">
@@ -306,10 +312,9 @@ function Home() {
 					<div class="double-titles text-center methodology" id="methodologie">
 						<h2 className="title-methodology">
 							<span className="title-methodology-subtitle">Processing</span>
-							<div className="double-titles-line">&nbsp;</div>
 						</h2>
 						<h3>Methodologie</h3>
-						
+						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p className="methodology-text">
 						J’adopte une méthodologie rigoureuse qui consiste à passer 95% de
@@ -362,6 +367,9 @@ function Home() {
 						<h3>Qui suis-je ?</h3>
 					</div>
 					<div className="about-me-blocks" id="quisuisje">
+						<div className="block-photo">
+							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
+						</div>
 						<p>
 							Je m’appelle{" "}
 							<a
@@ -384,9 +392,6 @@ function Home() {
 							exigences. L’écoute et la sagesse constituent le socle sur lequel
 							repose ma philosophie managériale.
 						</p>
-						<div className="block-photo">
-							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
-						</div>
 					</div>
 				</section>
 			</main>

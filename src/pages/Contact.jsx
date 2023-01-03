@@ -4,7 +4,7 @@ import { Line } from "rc-progress";
 
 function Contact() {
 	const [percent, setPercent] = useState(0);
-	const [stepLevel, setStepLevel] = useState(0);
+	const [stepLevel, setStepLevel] = useState(	);
 	const [steps, setSteps] = useState([]);
 	const [stepResponse, setStepResponse] = useState([]);
 	const messagesEndRef = useRef(null);
@@ -403,6 +403,14 @@ function Contact() {
 									className="button-cancel"
 								>
 									Revenir
+								</button>
+								<button
+									onClick={() => {
+									
+									}}
+									className="button-input"
+								>
+									Envoyer
 								</button>
 							</div>
 					  ))

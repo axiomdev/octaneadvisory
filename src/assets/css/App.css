@@ -396,6 +396,15 @@ footer p {
 
 .recap {
 	color: #f3f3f3;
+	padding-top: 84px;
+}
+
+.recap h1 {
+	margin-bottom: 20px;
+}
+
+.recap p {
+	margin-bottom: 20px;
 }
 
 .menu {
@@ -452,6 +461,11 @@ footer p {
 	text-align: center;
 }
 
+.methodology .double-titles-line {
+	margin-left: 42%;
+	margin-top: -42px;
+}
+
 .logo-step {
 	width: 100px;
 }
@@ -470,7 +484,7 @@ footer p {
 	margin-top: 70px;
 	margin-right: 30px;
 	margin-left: 30px;
-	height: 530px;
+	height: 490px;
 }
 
 .about-me-blocks {
@@ -635,7 +649,7 @@ footer p {
 .block-photo {
 	height: 40%;
 	text-align: center;
-	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .button-hero {

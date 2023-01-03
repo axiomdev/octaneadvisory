@@ -35,7 +35,6 @@
 	.margin-left-right {
 		margin-left: 40px;
 		margin-right: 40px;
-		
 	}
 
 	.hamburger-react {
@@ -49,7 +48,6 @@
 
 	.menu-desktop a {
 		margin-right: 65px;
-		
 	}
 
 	.link-nav-last {
@@ -86,10 +84,6 @@
 		top: 230px;
 	}
 
-	.photo-me {
-		width: 15%;
-	}
-
 	.step-question select {
 		width: 86%;
 	}
@@ -104,6 +98,12 @@
 
 	.title-methodology {
 		height: 120px;
+		left: 83px;
+	}
+
+	.methodology .double-titles-line {
+		margin-left: 48%;
+		margin-top: -66px;
 	}
 
 	.methodology h2 {
@@ -163,6 +163,10 @@
 		margin-top: -44px;
 	}
 
+	.block-photo {
+		text-align: left;
+	}
+
 	.block-explicative {
 		display: flex;
 		justify-content: space-between;
@@ -186,6 +190,9 @@
 
 	.block-explicative-block {
 		width: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.image-adjust-start {
@@ -203,7 +210,7 @@
 	}
 
 	.image-adjust {
-		width: 50%;
+		width: 35%;
 		display: flex;
 		justify-content: end;
 	}
@@ -228,11 +235,12 @@
 	.video-section {
 		margin-bottom: 140px;
 		flex-direction: row;
+		justify-content: space-between;
 		padding: 50px;
 	}
 
 	.video-section .text {
-		width: 40%;
+		width: 46%;
 	}
 
 	.video-section .text p {
@@ -293,5 +301,15 @@
 
 	.h2-step {
 		top: 90px;
+	}
+
+	.about-me-blocks {
+		display: flex;
+	}
+}
+
+@media (min-width: 1600px) {
+	.margin-left-right {
+		margin: auto;
 	}
 }
