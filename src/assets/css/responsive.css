@@ -167,6 +167,15 @@
 		text-align: left;
 	}
 
+	.photo-me {
+		width: 100%;
+	}
+
+	.block-photo {
+		margin-bottom: 0px;
+		width: 65%;
+	}
+
 	.block-explicative {
 		display: flex;
 		justify-content: space-between;
@@ -305,6 +314,13 @@
 
 	.about-me-blocks {
 		display: flex;
+		align-items: center;
+	}
+
+	.iam {
+		font-size: 19px;
+		line-height: 2.1;
+		margin-left: 73px;
 	}
 }
 

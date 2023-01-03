@@ -370,7 +370,7 @@ function Home() {
 						<div className="block-photo">
 							<img class="photo-me" src={photoMe} alt="photo-mendel-drai" />
 						</div>
-						<p>
+						<p className="iam">
 							Je m’appelle{" "}
 							<a
 								href="https://www.linkedin.com/in/mendel-drai-aa8761171/"
