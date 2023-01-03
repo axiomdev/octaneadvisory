@@ -821,3 +821,7 @@ label {
 .h2-step {	
 	top: 120px;
 }
+
+.react-multiple-carousel__arrow {
+    z-index: 10 !important;
+}
