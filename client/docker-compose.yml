@@ -21,7 +21,7 @@ services:
     labels:
       - "traefik.http.routers.octaneadvisory.rule=Host(`octaneadvisory.benodev.com`)"
       - "traefik.http.routers.octaneadvisory.entrypoints=websecure"
-      - "traefik.http.services.octaneadvisory.loadbalancer.server.port=8085"
+      - "traefik.http.services.octaneadvisory.loadbalancer.server.port=80"
       - "traefik.http.routers.octaneadvisory.service=octaneadvisory"
       - "traefik.http.routers.octaneadvisory.tls.certresolver=lets-encrypt"
 
