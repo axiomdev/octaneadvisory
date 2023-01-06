@@ -1,0 +1,55 @@
+version: '3.8'
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services: 
+  octaneadvisory:
+    container_name: octaneadvisory
+    build:
+      context: .
+    ports: 
+      - 8085:80
+    environment:
+      - NODE_ENV=production
+    networks:
+      - internal
+      - web
+    labels:
+      - "traefik.http.routers.suprailroad.rule=Host(`octaneadvisory.benodev.com`)"
+      - "traefik.http.routers.suprailroad.entrypoints=websecure"
+      - "traefik.http.services.suprailroad.loadbalancer.server.port=8082"
+      - "traefik.http.routers.suprailroad.service=suprailroad"
+      - "traefik.http.routers.suprailroad.tls.certresolver=lets-encrypt"
+
+
+# version: "3"
+
+# networks:
+#   web:
+#     external: true
+#   internal:
+#     external: false
+
+# services:
+#   app:
+#     networks:
+#       - internal
+#       - web
+#     labels:
+#       - "traefik.http.routers.suprailroad.rule=Host(`suprailroad.benodev.com`)"
+#       - "traefik.http.routers.suprailroad.entrypoints=websecure"
+#       - "traefik.http.services.suprailroad.loadbalancer.server.port=8001"
+#       - "traefik.http.routers.suprailroad.service=suprailroad"
+#       - "traefik.http.routers.suprailroad.tls.certresolver=lets-encrypt"
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     volumes:
+#       - ./src:/app/src
+#     ports:
+#       - "8001:8000"
+
