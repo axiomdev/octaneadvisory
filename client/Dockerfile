@@ -13,5 +13,6 @@ COPY . .
 RUN yarn build
 
 FROM nginx
-RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
+RUN unlink /var/log/nginx/access.log
+RUN unlink /var/log/nginx/error.log
 COPY --from=build /sup/build /usr/share/nginx/html
