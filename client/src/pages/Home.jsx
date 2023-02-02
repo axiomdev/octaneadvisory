@@ -90,6 +90,21 @@ function Home() {
 		},
 	];
 
+	const Rresponsive = {
+		desktop: {
+			breakpoint: { max: 3000, min: 1024 },
+			items: 1,
+		},
+		tablet: {
+			breakpoint: { max: 1024, min: 464 },
+			items: 1,
+		},
+		mobile: {
+			breakpoint: { max: 464, min: 0 },
+			items: 1,
+		},
+	};
+
 	return (
 		<>
 			<main>
@@ -215,7 +230,8 @@ function Home() {
 								dysfonctionnements de la chaine de valeur de l’entreprise, dans
 								le but de prendre des décisions éclairées, pour optimiser la
 								rentabilité. Il est alors possible de prendre des décisions
-								d’internalisation ou d’externalisation des maillons non stratégique de la chaine de valeur.
+								d’internalisation ou d’externalisation des maillons non
+								stratégique de la chaine de valeur.
 								<br></br>
 								<br></br>
 								<br></br>
@@ -240,8 +256,8 @@ function Home() {
 								d’investissements et gagne de nouvelle part de marché.
 							</p>
 							<br></br>
-								<br></br>
-								<br></br>
+							<br></br>
+							<br></br>
 						</div>
 						<div className="image-adjust">
 							<div className="center-image">
@@ -302,8 +318,16 @@ function Home() {
 						</Link>
 					</div>
 					<div className="center-image">
-						<div className="div-bb video-section-bb">
-							<img class="img-box" src={gif} />
+						<div className="div-bb">
+							<Carousel
+								responsive={Rresponsive}
+								infinite={true}
+								autoPlay={true}
+								autoPlaySpeed={100000}
+							>
+								<img class="img-box" src={gif} />
+								<img class="img-box" src={gif} />
+							</Carousel>
 						</div>
 					</div>
 				</section>
