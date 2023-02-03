@@ -310,6 +310,7 @@
 
 	.h2-step {
 		top: 90px;
+		width: 100%;
 	}
 
 	.about-me-blocks {
@@ -321,6 +322,10 @@
 		font-size: 19px;
 		line-height: 2.1;
 		margin-left: 73px;
+	}
+
+	.recap {
+		padding-top: 0px;
 	}
 }
 

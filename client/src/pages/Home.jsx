@@ -4,7 +4,8 @@ import secondStep from "../assets/images/second-step.png";
 import thirdStep from "../assets/images/third-step.png";
 import fourthStep from "../assets/images/fourth-step.png";
 import fifthStep from "../assets/images/fifth-step.png";
-import gif from "../assets/images/video-tableau-de-bord.gif";
+import gif1 from "../assets/images/GIF1.gif";
+import gif2 from "../assets/images/GIF2.gif";
 import photoMe from "../assets/images/mendel-drai.jpg";
 import inflechir from "../assets/images/inflechir.jpg";
 import maitriser from "../assets/images/maitriser.jpg";
@@ -19,7 +20,14 @@ import "react-multi-carousel/lib/styles.css";
 import Footer from "../components/Footer";
 
 function Home() {
-	const responsive = {
+	if(localStorage.getItem(1) != null) {
+		for (let index = 0; index < 11; index++) {
+			localStorage.removeItem(index)
+		}
+	}
+		
+
+	const Responsive = {
 		superLargeDesktop: {
 			breakpoint: { max: 4000, min: 1490 },
 			items: 5,
@@ -90,7 +98,7 @@ function Home() {
 		},
 	];
 
-	const Rresponsive = {
+	const CarouselTools = {
 		desktop: {
 			breakpoint: { max: 3000, min: 1024 },
 			items: 1,
@@ -131,8 +139,8 @@ function Home() {
 							de votre entreprise
 						</h1>
 						<p>
-							Ma mission est de capter et délivrer la valeur de votre entreprise
-							en alignant « stratégie et finance ».
+							Ma mission est de capter et délivrer la valeur de votre entreprise en alignant «
+							stratégie et finance ».
 						</p>
 						<div className="button-hero">
 							<Link to="/contact" className="button">
@@ -153,21 +161,15 @@ function Home() {
 						</div>
 						<div className="why-block">
 							<p>
-								La création de valeur est une nécessité avant même d’être un
-								but. L’entreprise capte cette valeur dès lors qu’elle atteint le
-								niveau de performance exigé par son équipe dirigeante. Le
-								pilotage de la performance permet d’infléchir la stratégie de
-								l’entreprise, d’optimiser sa rentabilité, de maitriser sa
-								trésorerie et de communiquer la vision stratégique de
-								l’entreprise. En bref, l’entreprise s’inscrit dans une démarche
-								active, réactive et proactive.
+								La création de valeur est une nécessité avant même d’être un but. L’entreprise capte
+								cette valeur dès lors qu’elle atteint le niveau de performance exigé par son équipe
+								dirigeante. Le pilotage de la performance permet d’infléchir la stratégie de
+								l’entreprise, d’optimiser sa rentabilité, de maitriser sa trésorerie et de
+								communiquer la vision stratégique de l’entreprise. En bref, l’entreprise s’inscrit
+								dans une démarche active, réactive et proactive.
 							</p>
 
-							<img
-								src={schema1}
-								className="schema1"
-								alt="schema-piloter-performance"
-							/>
+							<img src={schema1} className="schema1" alt="schema-piloter-performance" />
 						</div>
 					</div>
 
@@ -181,25 +183,18 @@ function Home() {
 								<div className="double-titles-line">&nbsp;</div>
 							</div>
 							<p>
-								L’entreprise performante devient agile. Elle est capable, non
-								seulement, de déployer et d’orienter sa stratégie mais aussi de
-								l’infléchir, en tirant des leçons des retours d’expériences.
-								Infléchir la stratégie de son entreprise, c’est anticiper les
-								actions et réactions de l’environnement dans lequel elle évolue.
-								C’est grâce à une vision synthétique et synoptique de la
-								performance que l’équipe dirigeante peut raisonner en «
-								connaissance de conséquence » plutôt qu’en connaissance de
-								cause.
+								L’entreprise performante devient agile. Elle est capable, non seulement, de déployer
+								et d’orienter sa stratégie mais aussi de l’infléchir, en tirant des leçons des
+								retours d’expériences. Infléchir la stratégie de son entreprise, c’est anticiper les
+								actions et réactions de l’environnement dans lequel elle évolue. C’est grâce à une
+								vision synthétique et synoptique de la performance que l’équipe dirigeante peut
+								raisonner en « connaissance de conséquence » plutôt qu’en connaissance de cause.
 							</p>
 						</div>
 						<div className="image-adjust">
 							<div className="center-image">
-								<div className="div-bb">
-									<img
-										src={inflechir}
-										alt="img-cube-inflechir"
-										className="img-box"
-									/>
+								<div className="border-beige-image">
+									<img src={inflechir} alt="img-cube-inflechir" className="img-box" />
 								</div>
 							</div>
 						</div>
@@ -208,12 +203,8 @@ function Home() {
 					<div className="block-explicative-optimize">
 						<div className="image-adjust-start">
 							<div className="center-image">
-								<div className="div-bb">
-									<img
-										src={optimiser}
-										alt="img-cube-optimiser"
-										className="img-box"
-									/>
+								<div className="border-beige-image">
+									<img src={optimiser} alt="img-cube-optimiser" className="img-box" />
 								</div>
 							</div>
 						</div>
@@ -226,12 +217,11 @@ function Home() {
 								<div className="double-titles-line">&nbsp;</div>
 							</div>
 							<p>
-								Le pilotage de la performance permet de détecter les
-								dysfonctionnements de la chaine de valeur de l’entreprise, dans
-								le but de prendre des décisions éclairées, pour optimiser la
-								rentabilité. Il est alors possible de prendre des décisions
-								d’internalisation ou d’externalisation des maillons non
-								stratégique de la chaine de valeur.
+								Le pilotage de la performance permet de détecter les dysfonctionnements de la chaine
+								de valeur de l’entreprise, dans le but de prendre des décisions éclairées, pour
+								optimiser la rentabilité. Il est alors possible de prendre des décisions
+								d’internalisation ou d’externalisation des maillons non stratégique de la chaine de
+								valeur.
 								<br></br>
 								<br></br>
 								<br></br>
@@ -249,10 +239,9 @@ function Home() {
 								<div className="double-titles-line">&nbsp;</div>
 							</div>
 							<p>
-								La gestion de la trésorerie est un levier d’action pour stimuler
-								la croissance de l’entreprise. Le talonnement de la performance
-								permet de prendre le contrôle sur la trésorerie. L’entreprise,
-								plus habile et proactive, saisie de nouvelles opportunités
+								La gestion de la trésorerie est un levier d’action pour stimuler la croissance de
+								l’entreprise. Le talonnement de la performance permet de prendre le contrôle sur la
+								trésorerie. L’entreprise, plus habile et proactive, saisie de nouvelles opportunités
 								d’investissements et gagne de nouvelle part de marché.
 							</p>
 							<br></br>
@@ -261,12 +250,8 @@ function Home() {
 						</div>
 						<div className="image-adjust">
 							<div className="center-image">
-								<div className="div-bb">
-									<img
-										src={maitriser}
-										alt="img-cube-inflechir"
-										className="img-box"
-									/>
+								<div className="border-beige-image">
+									<img src={maitriser} alt="img-cube-inflechir" className="img-box" />
 								</div>
 							</div>
 						</div>
@@ -275,7 +260,7 @@ function Home() {
 					<div className="block-explicative-optimize">
 						<div className="image-adjust-start">
 							<div className="center-image">
-								<div className="div-bb">
+								<div className="border-beige-image">
 									<img
 										src={communiquer}
 										alt="img-cube-optimiser"
@@ -293,14 +278,12 @@ function Home() {
 								<div className="double-titles-line">&nbsp;</div>
 							</div>
 							<p>
-								Le tableau de bord de performance est un outil de dialogue entre
-								la direction et ses subalternes. Il permet de partager, à
-								l’ensemble de l’entreprise, une vision commune de la
-								performance. Ce feedback génère un sentiment d’appartenance et
-								renforce la culture de l’entreprise. Il permet alors de faire
-								émerger de nouvelles idées de progrès, dans les processus et
-								routines de l’entreprise. L’intelligence collective stimule
-								ainsi la performance.
+								Le tableau de bord de performance est un outil de dialogue entre la direction et ses
+								subalternes. Il permet de partager, à l’ensemble de l’entreprise, une vision commune
+								de la performance. Ce feedback génère un sentiment d’appartenance et renforce la
+								culture de l’entreprise. Il permet alors de faire émerger de nouvelles idées de
+								progrès, dans les processus et routines de l’entreprise. L’intelligence collective
+								stimule ainsi la performance.
 							</p>
 						</div>
 					</div>
@@ -318,15 +301,15 @@ function Home() {
 						</Link>
 					</div>
 					<div className="center-image">
-						<div className="div-bb">
+						<div className="border-beige-image border-beige-carousel">
 							<Carousel
-								responsive={Rresponsive}
+								responsive={CarouselTools}
 								infinite={true}
 								autoPlay={true}
 								autoPlaySpeed={100000}
 							>
-								<img class="img-box" src={gif} />
-								<img class="img-box" src={gif} />
+								<img class="img-box img-box-carousel" src={gif1} />
+								<img class="img-box img-box-carousel" src={gif2} />
 							</Carousel>
 						</div>
 					</div>
@@ -341,25 +324,21 @@ function Home() {
 						<div className="double-titles-line">&nbsp;</div>
 					</div>
 					<p className="methodology-text">
-						J’adopte une méthodologie rigoureuse qui consiste à passer 95% de
-						mon temps à définir correctement votre problème et les 5% restants,
-						à trouver une solution optimale. Ce processus fait appel à la
-						collaboration et à l’échange, nous invitant à se poser les bonnes
-						questions. Une fois spécifier, votre problématique est structurée,
-						c’est-à-dire décomposer en plus petit problème. Cette phase
-						sollicite un esprit analytique et une réflexion constructive. Enfin,
-						pour solutionner le problème j’utilise l’approche DDPEC :
+						J’adopte une méthodologie rigoureuse qui consiste à passer 95% de mon temps à définir
+						correctement votre problème et les 5% restants, à trouver une solution optimale. Ce
+						processus fait appel à la collaboration et à l’échange, nous invitant à se poser les
+						bonnes questions. Une fois spécifier, votre problématique est structurée, c’est-à-dire
+						décomposer en plus petit problème. Cette phase sollicite un esprit analytique et une
+						réflexion constructive. Enfin, pour solutionner le problème j’utilise l’approche DDPEC :
 					</p>
 
 					<div class="wrapper">
 						<div className="card-step-mobile">
-							<Carousel responsive={responsive} infinite={false}>
+							<Carousel responsive={Responsive} infinite={false}>
 								{steps_methodology.map((step, index) => {
 									return (
 										<div className="card-step">
-											<span className={"step-" + step.step_number}>
-												{step.step_number}
-											</span>
+											<span className={"step-" + step.step_number}>{step.step_number}</span>
 											<div class="card-step-items">
 												<div class="double-titles">
 													<h2 className="h2-step">
@@ -367,11 +346,7 @@ function Home() {
 													</h2>
 													<h3 className="h3-step">{step.title}</h3>
 												</div>
-												<img
-													className="logo-step"
-													src={step.icon_path}
-													alt="first-step-logo"
-												/>
+												<img className="logo-step" src={step.icon_path} alt="first-step-logo" />
 												<p>{step.text}</p>
 											</div>
 										</div>
@@ -396,24 +371,18 @@ function Home() {
 						</div>
 						<p className="iam">
 							Je m’appelle{" "}
-							<a
-								href="https://www.linkedin.com/in/mendel-drai-aa8761171/"
-								target="_blank"
-							>
+							<a href="https://www.linkedin.com/in/mendel-drai-aa8761171/" target="_blank">
 								Mendel Drai
 							</a>
-							. Titulaire du diplôme supérieure de comptabilité et de gestion
-							(DSCG), certifié en stratégie et corporate finance de la
-							prestigieuse école HEC, mon savoir-faire s’articule autour d’une
-							double ambition : capter et délivrer la valeur de votre
-							entreprise. Après 8 ans d’évolution dans les domaines de la
-							comptabilité, la finance et la stratégie d’entreprise, je partage
-							mes connaissances aux entrepreneurs pour formuler des analyses
-							pertinentes en amont de toutes prises de décisions. Expert en
-							pilotage de la performance, je conçois des outils automatisés et
-							personnalisés tel que des tableaux de bord et des systèmes de
-							reporting. Je développe une approche taillée à la mesure de vos
-							exigences. L’écoute et la sagesse constituent le socle sur lequel
+							. Titulaire du diplôme supérieure de comptabilité et de gestion (DSCG), certifié en
+							stratégie et corporate finance de la prestigieuse école HEC, mon savoir-faire
+							s’articule autour d’une double ambition : capter et délivrer la valeur de votre
+							entreprise. Après 8 ans d’évolution dans les domaines de la comptabilité, la finance
+							et la stratégie d’entreprise, je partage mes connaissances aux entrepreneurs pour
+							formuler des analyses pertinentes en amont de toutes prises de décisions. Expert en
+							pilotage de la performance, je conçois des outils automatisés et personnalisés tel que
+							des tableaux de bord et des systèmes de reporting. Je développe une approche taillée à
+							la mesure de vos exigences. L’écoute et la sagesse constituent le socle sur lequel
 							repose ma philosophie managériale.
 						</p>
 					</div>

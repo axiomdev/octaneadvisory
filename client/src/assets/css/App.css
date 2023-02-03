@@ -28,14 +28,12 @@
 
 @font-face {
 	font-family: "Playfair Display Italic";
-	src: url("../fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf")
-		format("truetype");
+	src: url("../fonts/Playfair/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "Playfair Display";
-	src: url("../fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf")
-		format("truetype");
+	src: url("../fonts/Playfair/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }
 
 .link-nav {
@@ -45,8 +43,6 @@
 	letter-spacing: 5px;
 	color: #222222;
 }
-
-
 
 .block {
 	display: block;
@@ -279,7 +275,7 @@ header {
 	align-items: center;
 	position: fixed;
 	z-index: 100;
-	background: #FFF;
+	background: #fff;
 	left: 0;
 	right: 0;
 	padding-left: 20px;
@@ -608,6 +604,7 @@ footer p {
 	border: none;
 	color: #f3f3f3;
 	cursor: pointer;
+	
 }
 
 .card-step-mobile {
@@ -695,6 +692,7 @@ label {
 		rgba(182, 182, 190, 1) 47%,
 		rgba(239, 239, 245, 1) 71%
 	);
+	max-width: 300px;
 }
 
 .d-flex-center {
@@ -724,6 +722,10 @@ label {
 	left: 14px;
 }
 
+.img-box-carousel {
+	border-radius: 0px
+}
+
 .block-explicative {
 	display: flex;
 	flex-direction: column;
@@ -734,12 +736,8 @@ label {
 	flex-direction: column-reverse;
 }
 
-.div-bb {
-	background-image: -webkit-linear-gradient(
-		left,
-		#c1ad89,
-		rgba(193, 173, 137, 0.01)
-	);
+.border-beige-image {
+	background-image: -webkit-linear-gradient(left, #c1ad89, rgba(193, 173, 137, 0.01));
 	position: relative;
 	top: 0;
 	left: 0;
@@ -754,6 +752,10 @@ label {
 	height: auto;
 	width: 100%;
 	z-index: 9;
+}
+
+.border-beige-carousel {
+	padding-left: 15px;
 }
 
 .video-section {
@@ -818,10 +820,21 @@ label {
 	justify-content: center !important;
 }
 
-.h2-step {	
-	top: 120px;
-}
-
 .react-multiple-carousel__arrow {
-    z-index: 10 !important;
+	z-index: 10 !important;
+}
+ 
+.button-validate-form {
+margin-top: 10px;
+width: 40%;
+background: var(--primary-color);
+border-radius: 30px;
+font-family: "Poppins Semi Bold";
+height: 50px;
+text-decoration: none;
+text-transform: uppercase;
+border: none;
+color: #f3f3f3;
+cursor: pointer;
+max-width: 300px
 }

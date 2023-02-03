@@ -17,7 +17,7 @@ function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			setContact(true);
-		}, 5000);
+		}, 2500);
 	});
 	return (
 		<>
