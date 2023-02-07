@@ -717,11 +717,11 @@ label {
 }
 
 .img-box {
-	width: 108%;
 	border-radius: 8px;
-	position: relative;
-	top: 14px;
-	left: 14px;
+	width: 100%;
+    border-radius: 8px;
+    position: relative;
+    top: 14px;
 }
 
 .img-box-carousel {

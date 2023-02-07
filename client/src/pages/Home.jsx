@@ -326,7 +326,8 @@ function Home() {
 								responsive={CarouselTools}
 								infinite={true}
 								autoPlay={true}
-								autoPlaySpeed={100000}
+								autoPlaySpeed={3000}
+								removeArrowOnDeviceType={["tablet", "mobile"]}
 							>
 								<img class="img-box img-box-carousel" src={gif1} />
 								<img class="img-box img-box-carousel" src={gif2} />
