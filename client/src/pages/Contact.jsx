@@ -151,6 +151,9 @@ function Contact() {
 		<div className="p-relative margin-left-right">
 			<ToastContainer />
 			<div className="contact-top">
+				<div class="sub-contact">
+
+				</div>
 				<div className="line-percent">
 					<Line
 						percent={percent}

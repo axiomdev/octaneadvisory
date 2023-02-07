@@ -327,6 +327,10 @@
 	.recap {
 		padding-top: 0px;
 	}
+
+	.sub-contact {
+		display: none;
+	}
 }
 
 @media (min-width: 1600px) {
