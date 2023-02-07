@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import schema1 from "../assets/images/schema-1.png";
 import firstStep from "../assets/images/first-step.png";
 import secondStep from "../assets/images/second-step.png";
@@ -25,6 +26,20 @@ function Home() {
 			localStorage.removeItem(index)
 		}
 	}
+
+	const [contact, setContact] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setContact(true);
+		}, 2500);
+	});
+
+	useEffect(() => {
+		setTimeout(() => {
+			setContact(true);
+		}, 2500);
+	});
 		
 
 	const Responsive = {
@@ -116,6 +131,11 @@ function Home() {
 	return (
 		<>
 			<main>
+			{contact ? (
+				<div className="rounded-right animate__animated animate__fadeInRight">
+					<Link to="/contact">Contactez-moi</Link>
+				</div>
+			) : ""}
 				<div class="hero-background">
 					<div class="hero-block-texts animate__animated animate__fadeInUpBig">
 						<h1>
